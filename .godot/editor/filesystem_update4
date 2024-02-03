@@ -1,6 +1,6 @@
 res://controllers/fps_controller.tscn
 res://environment/WE_test.tres
 res://materials/orange_grid.tres
-res://controllers/scripts/fps_controller.gd
+res://shaders/postprocessingps1.gdshader
 res://levels/level_001.tscn
 res://levels/WE_test.tscn

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1yleqbb8tc7x"]
+[gd_scene load_steps=8 format=3 uid="uid://b1yleqbb8tc7x"]
 
 [ext_resource type="PackedScene" uid="uid://btv0a42cgxt8g" path="res://levels/WE_test.tscn" id="1_db21n"]
 [ext_resource type="Texture2D" uid="uid://blwu62r7auiqw" path="res://textures/prototypeTextures/Dark/texture_04.png" id="3_y583q"]
+[ext_resource type="Shader" path="res://shaders/postprocessingps1.gdshader" id="4_3hq1t"]
 [ext_resource type="Material" uid="uid://cc8bkrnrtgxmo" path="res://materials/orange_grid.tres" id="4_lfpe5"]
 [ext_resource type="PackedScene" uid="uid://c3ffql15mo0aj" path="res://controllers/fps_controller.tscn" id="4_liofc"]
 
@@ -9,17 +10,24 @@
 albedo_texture = ExtResource("3_y583q")
 uv1_triplanar = true
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_28pu2"]
+shader = ExtResource("4_3hq1t")
+shader_parameter/enabled = true
+shader_parameter/dithering = true
+shader_parameter/colors = 12
+shader_parameter/dither_size = 2
+
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("1_db21n")]
 
-[node name="Geometry" type="Node3D" parent="."]
-
-[node name="Floor" type="CSGBox3D" parent="Geometry"]
+[node name="Floor" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 3)
 material_override = SubResource("StandardMaterial3D_fmf16")
 use_collision = true
 size = Vector3(1000, 0.5, 1000)
+
+[node name="Geometry" type="Node3D" parent="."]
 
 [node name="CrouchPlatforms" type="CSGCombiner3D" parent="Geometry"]
 use_collision = true
@@ -45,10 +53,17 @@ transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 
 operation = 2
 size = Vector3(4, 7.09088, 4)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Geometry/Stair"]
+[node name="HallwayClipper" type="CSGBox3D" parent="Geometry/Stair"]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0.12132, 1.75, 8.96243)
 operation = 2
 size = Vector3(10, 3.5, 3)
+
+[node name="BackClipper" type="CSGCylinder3D" parent="Geometry/Stair"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 1, 5.5)
+operation = 2
+radius = 2.6
+height = 4.0
+sides = 16
 
 [node name="Arch" type="CSGCombiner3D" parent="Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
@@ -72,11 +87,18 @@ height = 10.0
 sides = 32
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.743841, 0.404659, -0.531933, -0.155327, 0.669425, 0.726459, 0.650057, 0.622994, -0.435091, -5.10478, 17.1795, -32.4271)
+transform = Transform3D(-0.743841, 0.404659, -0.531932, -0.155327, 0.669425, 0.72646, 0.650057, 0.622994, -0.435091, -5.10478, 17.1795, -32.4271)
 light_energy = 0.5
 shadow_enabled = true
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("4_liofc")]
-transform = Transform3D(-0.304515, 0, -0.952507, 0, 1, 0, 0.952507, 0, -0.304515, -6.78236, 0, 3.05716)
-floor_max_angle = 0.802851
-floor_snap_length = 0.2
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+material = SubResource("ShaderMaterial_28pu2")
+offset_right = 864.0
+offset_bottom = 648.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+size = Vector2i(864, 648)
+
+[node name="CharacterBody3D" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_liofc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.43082, 0, 3.90714)
