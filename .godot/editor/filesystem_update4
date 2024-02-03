@@ -1,9 +1,6 @@
-res://levels/WE_test.tscn
-res://environment/WE_test.tres
-res://levels/level_001.tscn
 res://controllers/fps_controller.tscn
+res://environment/WE_test.tres
 res://materials/orange_grid.tres
-res://materials/grid.tres
-res://controllers/scripts/FPS.gd
-res://controllers/FPS.tscn
 res://controllers/scripts/fps_controller.gd
+res://levels/level_001.tscn
+res://levels/WE_test.tscn

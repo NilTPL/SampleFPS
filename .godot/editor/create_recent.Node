@@ -1,3 +1,7 @@
+ShapeCast3D
+AnimationPlayer
+AnimationTree
+Node3D
 CSGBox3D
 CSGCombiner3D
 DirectionalLight3D

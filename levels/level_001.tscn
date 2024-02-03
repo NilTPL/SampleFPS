@@ -13,50 +13,63 @@ uv1_triplanar = true
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("1_db21n")]
 
-[node name="Floor" type="CSGBox3D" parent="."]
+[node name="Geometry" type="Node3D" parent="."]
+
+[node name="Floor" type="CSGBox3D" parent="Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 3)
 material_override = SubResource("StandardMaterial3D_fmf16")
 use_collision = true
 size = Vector3(1000, 0.5, 1000)
 
-[node name="Arch" type="CSGCombiner3D" parent="."]
+[node name="CrouchPlatforms" type="CSGCombiner3D" parent="Geometry"]
+use_collision = true
+
+[node name="StandPlatform" type="CSGBox3D" parent="Geometry/CrouchPlatforms"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.05, -3)
+size = Vector3(2, 0.1, 2)
+
+[node name="CrouchPlatform" type="CSGBox3D" parent="Geometry/CrouchPlatforms"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.75, -3)
+size = Vector3(2, 0.1, 2)
+
+[node name="Stair" type="CSGCombiner3D" parent="Geometry"]
+material_override = ExtResource("4_lfpe5")
+use_collision = true
+
+[node name="Stair" type="CSGBox3D" parent="Geometry/Stair"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88013, 2, 6)
+size = Vector3(10.2397, 4, 8)
+
+[node name="StairClipper" type="CSGBox3D" parent="Geometry/Stair"]
+transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, -1.57, 3.255, 4)
+operation = 2
+size = Vector3(4, 7.09088, 4)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Geometry/Stair"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0.12132, 1.75, 8.96243)
+operation = 2
+size = Vector3(10, 3.5, 3)
+
+[node name="Arch" type="CSGCombiner3D" parent="Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 material_override = ExtResource("4_lfpe5")
 use_collision = true
 
-[node name="Tunnel" type="CSGBox3D" parent="Arch"]
+[node name="Tunnel" type="CSGBox3D" parent="Geometry/Arch"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 0)
 size = Vector3(8, 4, 4)
 
-[node name="TunnelClipper" type="CSGBox3D" parent="Arch"]
+[node name="TunnelClipper" type="CSGBox3D" parent="Geometry/Arch"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.960693, 0)
 operation = 2
 size = Vector3(12, 2.07861, 2)
 
-[node name="ArchClipper" type="CSGCylinder3D" parent="Arch"]
+[node name="ArchClipper" type="CSGCylinder3D" parent="Geometry/Arch"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 1.34797, 2.00731, 0)
 operation = 2
 radius = 1.0
 height = 10.0
 sides = 32
-
-[node name="Stair" type="CSGCombiner3D" parent="."]
-material_override = ExtResource("4_lfpe5")
-use_collision = true
-
-[node name="Stair" type="CSGBox3D" parent="Stair"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 2, 6)
-size = Vector3(9, 4, 8)
-
-[node name="StairClipper" type="CSGBox3D" parent="Stair"]
-transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, -1.57, 3.255, 4)
-operation = 2
-size = Vector3(4, 7.09088, 4)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Stair"]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0.12132, 1.75, 8.96243)
-operation = 2
-size = Vector3(10, 3.5, 3)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.743841, 0.404659, -0.531933, -0.155327, 0.669425, 0.726459, 0.650057, 0.622994, -0.435091, -5.10478, 17.1795, -32.4271)
@@ -67,14 +80,3 @@ shadow_enabled = true
 transform = Transform3D(-0.304515, 0, -0.952507, 0, 1, 0, 0.952507, 0, -0.304515, -6.78236, 0, 3.05716)
 floor_max_angle = 0.802851
 floor_snap_length = 0.2
-
-[node name="CrouchPlatforms" type="CSGCombiner3D" parent="."]
-use_collision = true
-
-[node name="StandPlatform" type="CSGBox3D" parent="CrouchPlatforms"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.05, -3)
-size = Vector3(2, 0.1, 2)
-
-[node name="CrouchPlatform" type="CSGBox3D" parent="CrouchPlatforms"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.75, -3)
-size = Vector3(2, 0.1, 2)
