@@ -1,0 +1,186 @@
+// Game: Generic
+// Format: Standard
+// entity 0
+{
+"classname" "worldspawn"
+"_tb_mod" "textures"
+"_tb_textures" "textures;textures/base;textures/layers;textures/materials;textures/orrery;textures/pbr;textures/pbr/military-panel;textures/prototypeTextures;textures/prototypeTextures/Dark;textures/prototypeTextures/Green;textures/prototypeTextures/Light;textures/prototypeTextures/Orange;textures/prototypeTextures/Purple;textures/prototypeTextures/Red;textures/shaders;textures/special"
+// brush 0
+{
+( -64 -64 -16 ) ( -64 -63 -16 ) ( -64 -64 -15 ) prototypeTextures/Dark/texture_08 -516 900 0 -0.125 0.125
+( -64 -192 -16 ) ( -64 -192 -15 ) ( -63 -192 -16 ) prototypeTextures/Dark/texture_08 -516 900 180 0.125 -0.125
+( -64 -64 -16 ) ( -63 -64 -16 ) ( -64 -63 -16 ) prototypeTextures/Dark/texture_08 -512 512 0 0.125 0.125
+( 64 64 4 ) ( 64 65 4 ) ( 65 64 4 ) prototypeTextures/Dark/texture_08 -512 512 0 0.125 0.125
+( 64 64 16 ) ( 65 64 16 ) ( 64 64 17 ) prototypeTextures/Dark/texture_08 -516 900 0 0.125 0.125
+( 192 64 16 ) ( 192 64 17 ) ( 192 65 16 ) prototypeTextures/Dark/texture_08 -516 900 0 0.125 0.125
+}
+// brush 1
+{
+( 103 -185 16 ) ( 103 -179 14 ) ( 103 -179 16 ) prototypeTextures/Dark/texture_01 0 10 0 1 1
+( 112 -185 16 ) ( 103 -185 14 ) ( 103 -185 16 ) prototypeTextures/Dark/texture_01 0 10 0 1 1
+( 112 -179 14 ) ( 103 -185 14 ) ( 112 -185 14 ) prototypeTextures/Dark/texture_01 0 0 0 1 1
+( 112 -179 16 ) ( 103 -185 16 ) ( 103 -179 16 ) prototypeTextures/Dark/texture_01 0 0 0 1 1
+( 112 -176 16 ) ( 103 -176 14 ) ( 112 -176 14 ) prototypeTextures/Dark/texture_01 0 10 0 1 1
+( 112 -179 16 ) ( 112 -185 14 ) ( 112 -185 16 ) prototypeTextures/Dark/texture_01 0 10 0 1 1
+}
+// brush 2
+{
+( 103 -176 18 ) ( 103 -170 16 ) ( 103 -170 18 ) prototypeTextures/Dark/texture_01 -9 12 0 1 1
+( 112 -176 18 ) ( 103 -176 16 ) ( 103 -176 18 ) prototypeTextures/Dark/texture_01 0 12 0 1 1
+( 112 -170 16 ) ( 103 -176 16 ) ( 112 -176 16 ) prototypeTextures/Dark/texture_01 0 9 0 1 1
+( 112 -170 18 ) ( 103 -176 18 ) ( 103 -170 18 ) prototypeTextures/Dark/texture_01 0 9 0 1 1
+( 112 -167 18 ) ( 103 -167 16 ) ( 112 -167 16 ) prototypeTextures/Dark/texture_01 0 12 0 1 1
+( 112 -170 18 ) ( 112 -176 16 ) ( 112 -176 18 ) prototypeTextures/Dark/texture_01 -9 12 0 1 1
+}
+// brush 3
+{
+( 103 -167 20 ) ( 103 -161 18 ) ( 103 -161 20 ) prototypeTextures/Dark/texture_01 -18 14 0 1 1
+( 112 -167 20 ) ( 103 -167 18 ) ( 103 -167 20 ) prototypeTextures/Dark/texture_01 0 14 0 1 1
+( 112 -161 18 ) ( 103 -167 18 ) ( 112 -167 18 ) prototypeTextures/Dark/texture_01 0 18 0 1 1
+( 112 -161 20 ) ( 103 -167 20 ) ( 103 -161 20 ) prototypeTextures/Dark/texture_01 0 18 0 1 1
+( 112 -158 20 ) ( 103 -158 18 ) ( 112 -158 18 ) prototypeTextures/Dark/texture_01 0 14 0 1 1
+( 112 -161 20 ) ( 112 -167 18 ) ( 112 -167 20 ) prototypeTextures/Dark/texture_01 -18 14 0 1 1
+}
+// brush 4
+{
+( 103 -158 22 ) ( 103 -152 20 ) ( 103 -152 22 ) prototypeTextures/Dark/texture_01 -27 16 0 1 1
+( 112 -158 22 ) ( 103 -158 20 ) ( 103 -158 22 ) prototypeTextures/Dark/texture_01 0 16 0 1 1
+( 112 -152 20 ) ( 103 -158 20 ) ( 112 -158 20 ) prototypeTextures/Dark/texture_01 0 27 0 1 1
+( 112 -152 22 ) ( 103 -158 22 ) ( 103 -152 22 ) prototypeTextures/Dark/texture_01 0 27 0 1 1
+( 112 -149 22 ) ( 103 -149 20 ) ( 112 -149 20 ) prototypeTextures/Dark/texture_01 0 16 0 1 1
+( 112 -152 22 ) ( 112 -158 20 ) ( 112 -158 22 ) prototypeTextures/Dark/texture_01 -27 16 0 1 1
+}
+// brush 5
+{
+( 103 -149 24 ) ( 103 -143 22 ) ( 103 -143 24 ) prototypeTextures/Dark/texture_01 -36 18 0 1 1
+( 112 -149 24 ) ( 103 -149 22 ) ( 103 -149 24 ) prototypeTextures/Dark/texture_01 0 18 0 1 1
+( 112 -143 22 ) ( 103 -149 22 ) ( 112 -149 22 ) prototypeTextures/Dark/texture_01 0 36 0 1 1
+( 112 -143 24 ) ( 103 -149 24 ) ( 103 -143 24 ) prototypeTextures/Dark/texture_01 0 36 0 1 1
+( 112 -140 24 ) ( 103 -140 22 ) ( 112 -140 22 ) prototypeTextures/Dark/texture_01 0 18 0 1 1
+( 112 -143 24 ) ( 112 -149 22 ) ( 112 -149 24 ) prototypeTextures/Dark/texture_01 -36 18 0 1 1
+}
+// brush 6
+{
+( 103 -140 26 ) ( 103 -134 24 ) ( 103 -134 26 ) prototypeTextures/Dark/texture_01 -45 20 0 1 1
+( 112 -140 26 ) ( 103 -140 24 ) ( 103 -140 26 ) prototypeTextures/Dark/texture_01 0 20 0 1 1
+( 112 -134 24 ) ( 103 -140 24 ) ( 112 -140 24 ) prototypeTextures/Dark/texture_01 0 45 0 1 1
+( 112 -134 26 ) ( 103 -140 26 ) ( 103 -134 26 ) prototypeTextures/Dark/texture_01 0 45 0 1 1
+( 112 -131 26 ) ( 103 -131 24 ) ( 112 -131 24 ) prototypeTextures/Dark/texture_01 0 20 0 1 1
+( 112 -134 26 ) ( 112 -140 24 ) ( 112 -140 26 ) prototypeTextures/Dark/texture_01 -45 20 0 1 1
+}
+// brush 7
+{
+( 103 -131 28 ) ( 103 -125 26 ) ( 103 -125 28 ) prototypeTextures/Dark/texture_01 -54 22 0 1 1
+( 112 -131 28 ) ( 103 -131 26 ) ( 103 -131 28 ) prototypeTextures/Dark/texture_01 0 22 0 1 1
+( 112 -125 26 ) ( 103 -131 26 ) ( 112 -131 26 ) prototypeTextures/Dark/texture_01 0 54 0 1 1
+( 112 -125 28 ) ( 103 -131 28 ) ( 103 -125 28 ) prototypeTextures/Dark/texture_01 0 54 0 1 1
+( 112 -122 28 ) ( 103 -122 26 ) ( 112 -122 26 ) prototypeTextures/Dark/texture_01 0 22 0 1 1
+( 112 -125 28 ) ( 112 -131 26 ) ( 112 -131 28 ) prototypeTextures/Dark/texture_01 -54 22 0 1 1
+}
+// brush 8
+{
+( 103 -122 30 ) ( 103 -116 28 ) ( 103 -116 30 ) prototypeTextures/Dark/texture_01 -63 24 0 1 1
+( 112 -122 30 ) ( 103 -122 28 ) ( 103 -122 30 ) prototypeTextures/Dark/texture_01 0 24 0 1 1
+( 112 -116 28 ) ( 103 -122 28 ) ( 112 -122 28 ) prototypeTextures/Dark/texture_01 0 63 0 1 1
+( 112 -116 30 ) ( 103 -122 30 ) ( 103 -116 30 ) prototypeTextures/Dark/texture_01 0 63 0 1 1
+( 112 -113 30 ) ( 103 -113 28 ) ( 112 -113 28 ) prototypeTextures/Dark/texture_01 0 24 0 1 1
+( 112 -116 30 ) ( 112 -122 28 ) ( 112 -122 30 ) prototypeTextures/Dark/texture_01 -63 24 0 1 1
+}
+// brush 9
+{
+( 103 -113 32 ) ( 103 -107 30 ) ( 103 -107 32 ) prototypeTextures/Dark/texture_01 -72 26 0 1 1
+( 112 -113 32 ) ( 103 -113 30 ) ( 103 -113 32 ) prototypeTextures/Dark/texture_01 0 26 0 1 1
+( 112 -107 30 ) ( 103 -113 30 ) ( 112 -113 30 ) prototypeTextures/Dark/texture_01 0 72 0 1 1
+( 112 -107 32 ) ( 103 -113 32 ) ( 103 -107 32 ) prototypeTextures/Dark/texture_01 0 72 0 1 1
+( 112 -104 32 ) ( 103 -104 30 ) ( 112 -104 30 ) prototypeTextures/Dark/texture_01 0 26 0 1 1
+( 112 -107 32 ) ( 112 -113 30 ) ( 112 -113 32 ) prototypeTextures/Dark/texture_01 -72 26 0 1 1
+}
+// brush 10
+{
+( 103 -104 34 ) ( 103 -98 32 ) ( 103 -98 34 ) prototypeTextures/Dark/texture_01 -81 28 0 1 1
+( 112 -104 34 ) ( 103 -104 32 ) ( 103 -104 34 ) prototypeTextures/Dark/texture_01 0 28 0 1 1
+( 112 -98 32 ) ( 103 -104 32 ) ( 112 -104 32 ) prototypeTextures/Dark/texture_01 0 81 0 1 1
+( 112 -98 34 ) ( 103 -104 34 ) ( 103 -98 34 ) prototypeTextures/Dark/texture_01 0 81 0 1 1
+( 112 -95 34 ) ( 103 -95 32 ) ( 112 -95 32 ) prototypeTextures/Dark/texture_01 0 28 0 1 1
+( 112 -98 34 ) ( 112 -104 32 ) ( 112 -104 34 ) prototypeTextures/Dark/texture_01 -81 28 0 1 1
+}
+// brush 11
+{
+( 103 -95 36 ) ( 103 -89 34 ) ( 103 -89 36 ) prototypeTextures/Dark/texture_01 -90 30 0 1 1
+( 112 -95 36 ) ( 103 -95 34 ) ( 103 -95 36 ) prototypeTextures/Dark/texture_01 0 30 0 1 1
+( 112 -89 34 ) ( 103 -95 34 ) ( 112 -95 34 ) prototypeTextures/Dark/texture_01 0 90 0 1 1
+( 112 -89 36 ) ( 103 -95 36 ) ( 103 -89 36 ) prototypeTextures/Dark/texture_01 0 90 0 1 1
+( 112 -86 36 ) ( 103 -86 34 ) ( 112 -86 34 ) prototypeTextures/Dark/texture_01 0 30 0 1 1
+( 112 -89 36 ) ( 112 -95 34 ) ( 112 -95 36 ) prototypeTextures/Dark/texture_01 -90 30 0 1 1
+}
+// brush 12
+{
+( 90 -86 38 ) ( 90 -80 36 ) ( 90 -80 38 ) prototypeTextures/Dark/texture_01 -99 32 0 1 1
+( 124 -86 38 ) ( 115 -86 36 ) ( 115 -86 38 ) prototypeTextures/Dark/texture_01 -12 32 0 1 1
+( 124 -80 36 ) ( 115 -86 36 ) ( 124 -86 36 ) prototypeTextures/Dark/texture_01 -12 99 0 1 1
+( 124 -80 38 ) ( 115 -86 38 ) ( 115 -80 38 ) prototypeTextures/Dark/texture_01 -12 99 0 1 1
+( 124 -52 38 ) ( 115 -52 36 ) ( 124 -52 36 ) prototypeTextures/Dark/texture_01 -12 32 0 1 1
+( 124 -80 38 ) ( 124 -86 36 ) ( 124 -86 38 ) prototypeTextures/Dark/texture_01 -99 32 0 1 1
+}
+// brush 13
+{
+( 0 -48 4 ) ( 0 -47 4 ) ( 0 -48 5 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 0 -48 4 ) ( 0 -48 5 ) ( 1 -48 4 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 0 -48 4 ) ( 1 -48 4 ) ( 0 -47 4 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 47 -48 41 ) ( 13 -48 41 ) ( 13 80 41 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 16 32 20 ) ( 17 32 20 ) ( 16 32 21 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 19 -48 4 ) ( 19 -48 52 ) ( 19 80 52 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+}
+// brush 14
+{
+( 48 -48 4 ) ( 47 80 52 ) ( 47 -48 52 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 0 -48 4 ) ( 0 -48 5 ) ( 1 -48 4 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 0 -48 4 ) ( 1 -48 4 ) ( 0 -47 4 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 47 -48 41 ) ( 13 -48 41 ) ( 13 80 41 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 16 32 20 ) ( 17 32 20 ) ( 16 32 21 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 64 -32 20 ) ( 64 -32 21 ) ( 64 -31 20 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+}
+// brush 15
+{
+( 0 -48 4 ) ( 0 -47 4 ) ( 0 -48 5 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 0 -48 4 ) ( 0 -48 5 ) ( 1 -48 4 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 47 -48 41 ) ( 13 80 41 ) ( 13 -48 41 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 16 -32 52 ) ( 16 -31 52 ) ( 17 -32 52 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 16 32 20 ) ( 17 32 20 ) ( 16 32 21 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 19 -48 4 ) ( 19 -48 52 ) ( 19 80 52 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+}
+// brush 16
+{
+( 19 -48 4 ) ( 19 80 52 ) ( 19 -48 52 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 0 -48 4 ) ( 0 -48 5 ) ( 1 -48 4 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 47 -48 41 ) ( 13 80 41 ) ( 13 -48 41 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 16 -32 52 ) ( 16 -31 52 ) ( 17 -32 52 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 16 32 20 ) ( 17 32 20 ) ( 16 32 21 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 48 -48 4 ) ( 47 -48 52 ) ( 47 80 52 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+}
+// brush 17
+{
+( 48 -48 4 ) ( 47 80 52 ) ( 47 -48 52 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 0 -48 4 ) ( 0 -48 5 ) ( 1 -48 4 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 47 -48 41 ) ( 13 80 41 ) ( 13 -48 41 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 16 -32 52 ) ( 16 -31 52 ) ( 17 -32 52 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 16 32 20 ) ( 17 32 20 ) ( 16 32 21 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 64 -32 20 ) ( 64 -32 21 ) ( 64 -31 20 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+}
+// brush 18
+{
+( 43 -48 41 ) ( 47 -48 35 ) ( 47 80 35 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 0 -48 4 ) ( 0 -48 5 ) ( 1 -48 4 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 47 -48 41 ) ( 13 -48 41 ) ( 13 80 41 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 16 32 20 ) ( 17 32 20 ) ( 16 32 21 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 48 -48 4 ) ( 47 -48 52 ) ( 47 80 52 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+}
+// brush 19
+{
+( 19 -48 4 ) ( 19 80 52 ) ( 19 -48 52 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 0 -48 4 ) ( 0 -48 5 ) ( 1 -48 4 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 47 -48 41 ) ( 13 -48 41 ) ( 13 80 41 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 16 32 20 ) ( 17 32 20 ) ( 16 32 21 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+( 24 -48 41 ) ( 19 80 36 ) ( 19 -48 36 ) prototypeTextures/Red/texture_03 0 256 0 0.015625 0.015625
+}
+}

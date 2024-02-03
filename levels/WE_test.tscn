@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://btv0a42cgxt8g"]
+
+[ext_resource type="Environment" uid="uid://dsay4gdr8k6ur" path="res://environment/WE_test.tres" id="1_cvy6j"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_6jxbs"]
+dof_blur_far_distance = 50.0
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = ExtResource("1_cvy6j")
+camera_attributes = SubResource("CameraAttributesPractical_6jxbs")

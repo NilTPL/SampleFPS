@@ -1,0 +1,43 @@
+// Game: Generic
+// Format: Standard
+// entity 0
+{
+"classname" "worldspawn"
+"_tb_textures" "textures;textures/base;textures/layers;textures/materials;textures/orrery;textures/pbr;textures/pbr/military-panel;textures/prototypeTextures;textures/prototypeTextures/Dark;textures/prototypeTextures/Green;textures/prototypeTextures/Light;textures/prototypeTextures/Orange;textures/prototypeTextures/Purple;textures/prototypeTextures/Red;textures/shaders;textures/special"
+// brush 0
+{
+( -720 -80 -16 ) ( -720 -79 -16 ) ( -720 -80 -15 ) prototypeTextures/Dark/texture_08 80 -16 0 1 1
+( -80 -80 -16 ) ( -80 -80 -15 ) ( -79 -80 -16 ) prototypeTextures/Dark/texture_08 209 16 0 1 1
+( -80 -80 -16 ) ( -79 -80 -16 ) ( -80 -79 -16 ) prototypeTextures/Dark/texture_08 -48 -80 0 1 1
+( 48 48 16 ) ( 48 49 16 ) ( 49 48 16 ) prototypeTextures/Dark/texture_08 48 80 180 1 1
+( 48 432 16 ) ( 49 432 16 ) ( 48 432 17 ) prototypeTextures/Dark/texture_08 -48 16 0 1 1
+( 48 48 16 ) ( 48 48 17 ) ( 48 49 16 ) prototypeTextures/Dark/texture_08 80 16 0 1 1
+}
+// brush 1
+{
+( -480 -80 16 ) ( -480 -79 16 ) ( -480 -80 17 ) prototypeTextures/Dark/texture_13 -322 88.333374 180 0.25 -0.1875
+( -576 -80 16 ) ( -576 -80 17 ) ( -575 -80 16 ) prototypeTextures/Dark/texture_13 256 85.33325 0 0.25 0.1875
+( -576 -80 16 ) ( -575 -80 16 ) ( -576 -79 16 ) prototypeTextures/Dark/texture_13 256 85.33333 0 0.25 0.1875
+( -448 48 208 ) ( -448 49 208 ) ( -447 48 208 ) prototypeTextures/Dark/texture_13 256 85.33333 0 0.25 0.1875
+( -448 176 48 ) ( -447 176 48 ) ( -448 176 49 ) prototypeTextures/Dark/texture_13 256 85.33325 0 0.25 0.1875
+( -448 48 48 ) ( -448 48 49 ) ( -448 49 48 ) prototypeTextures/Dark/texture_13 320 85.33325 0 0.25 0.1875
+}
+// brush 2
+{
+( -480 -80 16 ) ( -480 -79 16 ) ( -480 -80 17 ) prototypeTextures/Dark/texture_13 -322 88.333374 180 0.25 -0.1875
+( -576 -80 16 ) ( -576 -80 17 ) ( -575 -80 16 ) prototypeTextures/Dark/texture_13 256 85.33325 0 0.25 0.1875
+( -576 -80 16 ) ( -575 -80 16 ) ( -576 -79 16 ) prototypeTextures/Dark/texture_13 256 85.33333 0 0.25 0.1875
+( -448 48 208 ) ( -448 49 208 ) ( -447 48 208 ) prototypeTextures/Dark/texture_13 256 85.33333 0 0.25 0.1875
+( -448 176 48 ) ( -447 176 48 ) ( -448 176 49 ) prototypeTextures/Dark/texture_13 256 85.33325 0 0.25 0.1875
+( -448 48 48 ) ( -448 48 49 ) ( -448 49 48 ) prototypeTextures/Dark/texture_13 320 85.33325 0 0.25 0.1875
+}
+// brush 3
+{
+( -448 -80 64 ) ( -448 -79 64 ) ( -448 -80 65 ) prototypeTextures/Dark/texture_13 -322 344.33334 180 0.25 -0.1875
+( -544 -80 64 ) ( -544 -80 65 ) ( -543 -80 64 ) prototypeTextures/Dark/texture_13 128 341.33322 0 0.25 0.1875
+( -544 -80 64 ) ( -543 -80 64 ) ( -544 -79 64 ) prototypeTextures/Dark/texture_13 128 85.33331 0 0.25 0.1875
+( -416 48 96 ) ( -416 49 96 ) ( -415 48 96 ) prototypeTextures/Dark/texture_13 128 85.33331 0 0.25 0.1875
+( -416 176 96 ) ( -415 176 96 ) ( -416 176 97 ) prototypeTextures/Dark/texture_13 128 341.33322 0 0.25 0.1875
+( -416 48 96 ) ( -416 48 97 ) ( -416 49 96 ) prototypeTextures/Dark/texture_13 320 341.33322 0 0.25 0.1875
+}
+}
