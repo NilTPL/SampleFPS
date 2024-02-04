@@ -20,6 +20,5 @@ sdfgi_enabled = true
 sdfgi_energy = 0.7
 fog_light_color = Color(0.517647, 0.552941, 0.607843, 1)
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.015
-volumetric_fog_length = 500.0
+volumetric_fog_length = 5000.0
 adjustment_enabled = true

@@ -4,4 +4,3 @@ res://shaders/postprocessingps1.gdshader
 res://materials/orange_grid.tres
 res://levels/WE_test.tscn
 res://controllers/fps_controller.tscn
-res://controllers/scripts/Reticle.gd
