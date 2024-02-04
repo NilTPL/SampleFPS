@@ -1,3 +1,6 @@
+Line2D
+CenterContainer
+Control
 SubViewportContainer
 SubViewport
 MeshInstance3D
@@ -10,5 +13,3 @@ CSGBox3D
 CSGCombiner3D
 DirectionalLight3D
 StaticBody3D
-CollisionShape3D
-RigidBody3D

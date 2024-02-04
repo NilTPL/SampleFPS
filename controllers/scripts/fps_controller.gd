@@ -38,7 +38,7 @@ func _input(event):
 		get_tree().quit()
 	if event.is_action_pressed("player_crouch") and TOGGLE_CROUCH == true:
 		toggle_crouch()
-	if event.is_action_pressed("player_crouch") and _is_crouching == false and is_on_floor() and TOGGLE_CROUCH == false: #crouching while holding
+	if event.is_action_pressed("player_crouch") and _is_crouching == false and TOGGLE_CROUCH == false: #crouching while holding
 		crouching(true)
 	if event.is_action_released("player_crouch") and TOGGLE_CROUCH == false: 
 		if CROUCH_SHAPECAST.is_colliding() == false:
