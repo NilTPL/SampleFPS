@@ -1,17 +1,8 @@
-[gd_resource type="Environment" load_steps=4 format=3 uid="uid://dsay4gdr8k6ur"]
-
-[ext_resource type="Texture2D" uid="uid://gktkhr5jgh6y" path="res://textures/kloofendal_overcast_puresky_4k.hdr" id="1_74xaq"]
-
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_4oof3"]
-panorama = ExtResource("1_74xaq")
-
-[sub_resource type="Sky" id="Sky_0poj2"]
-sky_material = SubResource("PanoramaSkyMaterial_4oof3")
+[gd_resource type="Environment" format=3 uid="uid://dsay4gdr8k6ur"]
 
 [resource]
-background_mode = 2
+background_mode = 1
 background_color = Color(1, 1, 1, 1)
-sky = SubResource("Sky_0poj2")
 ambient_light_source = 3
 reflected_light_source = 2
 tonemap_mode = 3
@@ -20,5 +11,7 @@ sdfgi_enabled = true
 sdfgi_energy = 0.7
 fog_light_color = Color(0.517647, 0.552941, 0.607843, 1)
 volumetric_fog_enabled = true
-volumetric_fog_length = 5000.0
+volumetric_fog_albedo = Color(0.25098, 0.25098, 0.25098, 1)
+volumetric_fog_emission = Color(0.227451, 0.227451, 0.227451, 1)
+volumetric_fog_length = 100.0
 adjustment_enabled = true

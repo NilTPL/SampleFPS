@@ -1,7 +1,7 @@
-res://controllers/fps_controller.tscn
+res://levels/level_001.tscn
 res://environment/WE_test.tres
 res://shaders/postprocessingps1.gdshader
 res://materials/orange_grid.tres
-res://levels/level_001.tscn
 res://levels/WE_test.tscn
-res://controllers/scripts/Reticle.gd
+res://controllers/fps_controller.tscn
+res://controllers/scripts/fps_controller.gd

@@ -1,3 +1,4 @@
+DirectionalLight3D
 Line2D
 CenterContainer
 Control
@@ -11,5 +12,3 @@ AnimationTree
 Node3D
 CSGBox3D
 CSGCombiner3D
-DirectionalLight3D
-StaticBody3D
