@@ -6,18 +6,22 @@ extends CharacterBody3D
 @onready var camera_target = $Body/Head/CameraMarker3D
 @onready var head_position: Vector3 = head.position
 
+@export var ANIMATIONPLAYER: AnimationPlayer
+@export var CROUCH_SHAPECAST : Node3D
 @export var mouse_sensitivity: float = 0.1
+@export_range(1, 20, 0.1) var CROUCH_SPEED: float = 15.0
 
-const ACCELERATION_DEFAULT: float = 5.0
+const ACCELERATION_DEFAULT: float = 7.0
 const ACCELERATION_AIR: float = 1.0
-const SPEED_DEFAULT: float = 5.0
-const SPEED_ON_STAIRS: float = 3.5
+@export var SPEED_DEFAULT: float = 7.0
+@export var SPEED_ON_STAIRS: float = 3.5
+@export var SPEED_CROUCH: float = 3.0
 
 var acceleration: float = ACCELERATION_DEFAULT
 var speed: float = SPEED_DEFAULT
 
-@export var gravity: float = 9.8
-@export var jump: float = 4.5
+var gravity: float = 9.8
+var jump: float = 5.0
 var direction: Vector3 = Vector3.ZERO
 var main_velocity: Vector3 = Vector3.ZERO
 var gravity_direction: Vector3 = Vector3.ZERO
@@ -28,9 +32,9 @@ const WALL_MARGIN: float = 0.001
 const STEP_DOWN_MARGIN: float = 0.01
 const STEP_HEIGHT_DEFAULT: Vector3 = Vector3(0, 0.6, 0)
 const STEP_HEIGHT_IN_AIR_DEFAULT: Vector3 = Vector3(0, 0.6, 0)
-const STEP_MAX_SLOPE_DEGREE: float = 46.0
+const STEP_MAX_SLOPE_DEGREE: float = 40.0
 const STEP_CHECK_COUNT: int = 2
-const SPEED_CLAMP_AFTER_JUMP_COEFFICIENT = 0.1
+const SPEED_CLAMP_AFTER_JUMP_COEFFICIENT = 0.4
 const SPEED_CLAMP_SLOPE_STEP_UP_COEFFICIENT = 0.4
 
 var step_height_main: Vector3
@@ -38,6 +42,7 @@ var step_incremental_check_height: Vector3
 @export var is_enabled_stair_stepping_in_air: bool = true
 var is_jumping: bool = false
 var is_in_air: bool = false
+var is_crouching: bool = false
 
 var head_offset: Vector3 = Vector3.ZERO
 var camera_target_position : Vector3 = Vector3.ZERO
@@ -63,6 +68,8 @@ func _ready():
 	
 	camera_gt_previous = camera_target.global_transform
 	camera_gt_current = camera_target.global_transform
+
+	CROUCH_SHAPECAST.add_exception($".")
 
 func update_camera_transform():
 	camera_gt_previous = camera_gt_current
@@ -97,12 +104,12 @@ func _process(delta: float) -> void:
 		camera.position.y = camera_target_position.y
 
 func _input(event):
-	if event.is_action_pressed("exit"):
-		get_tree().quit()
 	if event is InputEventMouseMotion:
 		body.rotate_y(deg_to_rad(-event.relative.x * mouse_sensitivity))
 		head.rotate_x(deg_to_rad(-event.relative.y * mouse_sensitivity))
 		head.rotation.x = clamp(head.rotation.x, deg_to_rad(-89), deg_to_rad(89))
+	if event.is_action_pressed("exit"):
+		get_tree().quit()
 
 func _physics_process(delta):
 	update_camera = true
@@ -172,10 +179,11 @@ func step_check(delta: float, is_jumping_: bool, step_result: StepResult):
 	
 	step_height_main = STEP_HEIGHT_DEFAULT
 	step_incremental_check_height = STEP_HEIGHT_DEFAULT / STEP_CHECK_COUNT
-
+	
 	if is_in_air and is_enabled_stair_stepping_in_air:
 		step_height_main = STEP_HEIGHT_IN_AIR_DEFAULT
 		step_incremental_check_height = STEP_HEIGHT_IN_AIR_DEFAULT / STEP_CHECK_COUNT
+		
 	if gravity_direction.y >= 0:
 		for i in range(STEP_CHECK_COUNT):
 			var test_motion_result: PhysicsTestMotionResult3D = PhysicsTestMotionResult3D.new()
@@ -288,3 +296,5 @@ func step_check(delta: float, is_jumping_: bool, step_result: StepResult):
 						step_result.normal = test_motion_result.get_collision_normal()
 
 	return is_step
+
+

@@ -1,0 +1,18 @@
+// Game: SampleFPS
+// Format: Valve
+// entity 0
+{
+"mapversion" "220"
+"classname" "worldspawn"
+"_tb_textures" "textures/tiny/tp1/Bricks;textures/tiny/tp1/Grass;textures/tiny/tp2/Brick;textures/tiny/tp2/Dirt;textures/tiny/tp2/Elements"
+"_tb_def" "builtin:QodotEssentials.fgd"
+// brush 0
+{
+( -6464.5 -6416 0 ) ( -6464.5 6384 -2 ) ( -6464.5 6384 0 ) tiny/tp1/Grass/Grass_01-128x128 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( 6335.5 -6416 0 ) ( -6464.5 -6416 -2 ) ( -6464.5 -6416 0 ) tiny/tp1/Grass/Grass_01-128x128 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( 6335.5 6384 -2 ) ( -6464.5 -6416 -2 ) ( 6335.5 -6416 -2 ) tiny/tp1/Grass/Grass_01-128x128 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.0625 0.0625
+( 6335.5 6384 0 ) ( -6464.5 -6416 0 ) ( -6464.5 6384 0 ) tiny/tp1/Grass/Grass_01-128x128 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.0625 0.0625
+( 6335.5 6384 0 ) ( -6464.5 6384 -2 ) ( 6335.5 6384 -2 ) tiny/tp1/Grass/Grass_01-128x128 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( 6335.5 6384 0 ) ( 6335.5 -6416 -2 ) ( 6335.5 -6416 0 ) tiny/tp1/Grass/Grass_01-128x128 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+}
+}

@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvptp41ghn24j"
-path.s3tc="res://.godot/imported/lava.png-d7cb2194aa215f1d2cbd770e9b383a91.s3tc.ctex"
+path="res://.godot/imported/lava.png-d7cb2194aa215f1d2cbd770e9b383a91.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://textures/layers/lava.png"
-dest_files=["res://.godot/imported/lava.png-d7cb2194aa215f1d2cbd770e9b383a91.s3tc.ctex"]
+dest_files=["res://.godot/imported/lava.png-d7cb2194aa215f1d2cbd770e9b383a91.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=1.0
 compress/hdr_compression=1

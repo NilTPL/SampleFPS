@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xkeao1d0hxcj"
-path.s3tc="res://.godot/imported/metal.png-8999d03f2f154df2cdb75e71d44230b7.s3tc.ctex"
+path="res://.godot/imported/metal.png-8999d03f2f154df2cdb75e71d44230b7.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://textures/orrery/metal.png"
-dest_files=["res://.godot/imported/metal.png-8999d03f2f154df2cdb75e71d44230b7.s3tc.ctex"]
+dest_files=["res://.godot/imported/metal.png-8999d03f2f154df2cdb75e71d44230b7.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=1.0
 compress/hdr_compression=1

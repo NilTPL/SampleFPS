@@ -1,0 +1,53 @@
+// Game: SampleFPS
+// Format: Valve
+// entity 0
+{
+"mapversion" "220"
+"classname" "worldspawn"
+"_tb_textures" "textures/prototypeTextures;textures/prototypeTextures/Dark;textures/prototypeTextures/Green;textures/prototypeTextures/Light;textures/prototypeTextures/Orange;textures/prototypeTextures/Purple;textures/prototypeTextures/Red"
+// brush 0
+{
+( -6400.5 -6400 -32 ) ( -6400.5 -6300 -32 ) ( -6400.5 -6400 -31 ) prototypeTextures/Dark/texture_04 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( -6301.275193798449 -6400 -32 ) ( -6301.275193798449 -6400 -31 ) ( -6202.050387596899 -6400 -32 ) prototypeTextures/Dark/texture_04 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( -6301.275193798449 -6400 -2 ) ( -6202.050387596899 -6400 -2 ) ( -6301.275193798449 -6300 -2 ) prototypeTextures/Dark/texture_04 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.0625 0.0625
+( 6399.5 6400 0 ) ( 6399.5 6500 0 ) ( 6498.724806201551 6400 0 ) prototypeTextures/Dark/texture_04 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.0625 0.0625
+( 6399.5 6400 0 ) ( 6498.724806201551 6400 0 ) ( 6399.5 6400 1 ) prototypeTextures/Dark/texture_04 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( 6399.5 6400 0 ) ( 6399.5 6400 1 ) ( 6399.5 6500 0 ) prototypeTextures/Dark/texture_04 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+}
+// brush 1
+{
+( -80 -64 48 ) ( -80 -128 48 ) ( -80 -64 0 ) prototypeTextures/Orange/texture_08 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( -72 -128 0 ) ( -80 -128 0 ) ( -72 -128 48 ) prototypeTextures/Orange/texture_08 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( -72 -64 0 ) ( -80 -64 0 ) ( -72 -128 0 ) prototypeTextures/Orange/texture_08 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.0625 0.0625
+( -72 -128 48 ) ( -80 -128 48 ) ( -72 -64 48 ) prototypeTextures/Orange/texture_08 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.0625 0.0625
+( -72 -64 48 ) ( -80 -64 48 ) ( -72 -64 0 ) prototypeTextures/Orange/texture_08 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( -72 -128 48 ) ( -72 -64 48 ) ( -72 -128 0 ) prototypeTextures/Orange/texture_08 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+}
+// brush 2
+{
+( -120 -128 0 ) ( -120 -64 0 ) ( -120 -128 48 ) prototypeTextures/Orange/texture_08 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( -120 -128 48 ) ( -112 -128 48 ) ( -120 -128 0 ) prototypeTextures/Orange/texture_08 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( -120 -128 0 ) ( -112 -128 0 ) ( -120 -64 0 ) prototypeTextures/Orange/texture_08 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.0625 0.0625
+( -120 -64 48 ) ( -112 -64 48 ) ( -120 -128 48 ) prototypeTextures/Orange/texture_08 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.0625 0.0625
+( -120 -64 0 ) ( -112 -64 0 ) ( -120 -64 48 ) prototypeTextures/Orange/texture_08 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( -112 -128 0 ) ( -112 -128 48 ) ( -112 -64 0 ) prototypeTextures/Orange/texture_08 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+}
+// brush 3
+{
+( -112 -128 48 ) ( -112 -128 40 ) ( -112 -64 48 ) prototypeTextures/Orange/texture_08 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( -80 -128 48 ) ( -80 -128 40 ) ( -112 -128 48 ) prototypeTextures/Orange/texture_08 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( -80 -128 40 ) ( -80 -64 40 ) ( -112 -128 40 ) prototypeTextures/Orange/texture_08 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.0625 0.0625
+( -80 -128 48 ) ( -112 -128 48 ) ( -80 -64 48 ) prototypeTextures/Orange/texture_08 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.0625 0.0625
+( -112 -64 48 ) ( -112 -64 40 ) ( -80 -64 48 ) prototypeTextures/Orange/texture_08 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( -80 -64 48 ) ( -80 -64 40 ) ( -80 -128 48 ) prototypeTextures/Orange/texture_08 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+}
+// brush 4
+{
+( -88 -64 48 ) ( -88 -128 48 ) ( -88 -64 0 ) prototypeTextures/Orange/texture_08 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( -80 -128 0 ) ( -88 -128 0 ) ( -80 -128 48 ) prototypeTextures/Orange/texture_08 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( -80 -64 32 ) ( -88 -64 32 ) ( -80 -128 32 ) prototypeTextures/Orange/texture_08 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.0625 0.0625
+( -80 -128 40 ) ( -88 -128 40 ) ( -80 -64 40 ) prototypeTextures/Orange/texture_08 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.0625 0.0625
+( -80 -64 48 ) ( -88 -64 48 ) ( -80 -64 0 ) prototypeTextures/Orange/texture_08 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+( -80 -128 48 ) ( -80 -64 48 ) ( -80 -128 0 ) prototypeTextures/Orange/texture_08 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.0625 0.0625
+}
+}

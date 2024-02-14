@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://lrtiyqasfn3u"
+path="res://.godot/imported/level1.8.map-ab90ab931d852f95fb357a3a18b7e8d2.tres"
+
+[deps]
+
+source_file="res://maps/autosave/level1.8.map"
+dest_files=["res://.godot/imported/level1.8.map-ab90ab931d852f95fb357a3a18b7e8d2.tres"]
+
+[params]
+

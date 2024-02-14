@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://eoqc6t75ucre"
-path.s3tc="res://.godot/imported/uv_test_material.png-90fa365b4c6526dc52687af55a87026c.s3tc.ctex"
+path="res://.godot/imported/uv_test_material.png-90fa365b4c6526dc52687af55a87026c.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://textures/materials/uv_test_material.png"
-dest_files=["res://.godot/imported/uv_test_material.png-90fa365b4c6526dc52687af55a87026c.s3tc.ctex"]
+dest_files=["res://.godot/imported/uv_test_material.png-90fa365b4c6526dc52687af55a87026c.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=1.0
 compress/hdr_compression=1

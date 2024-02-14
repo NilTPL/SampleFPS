@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://df7s57f6m26uf"
-path.s3tc="res://.godot/imported/military-panel_metallic.png-a16673d325a906288e8b6b6bc67e9334.s3tc.ctex"
+path="res://.godot/imported/military-panel_metallic.png-a16673d325a906288e8b6b6bc67e9334.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://textures/pbr/military-panel/military-panel_metallic.png"
-dest_files=["res://.godot/imported/military-panel_metallic.png-a16673d325a906288e8b6b6bc67e9334.s3tc.ctex"]
+dest_files=["res://.godot/imported/military-panel_metallic.png-a16673d325a906288e8b6b6bc67e9334.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=1.0
 compress/hdr_compression=1

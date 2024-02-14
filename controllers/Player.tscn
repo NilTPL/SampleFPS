@@ -1,13 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://x3l0v6tbskoe"]
+[gd_scene load_steps=11 format=3 uid="uid://x3l0v6tbskoe"]
 
 [ext_resource type="Script" path="res://controllers/scripts/Player.gd" id="1"]
 
 [sub_resource type="BoxShape3D" id="6"]
 margin = 0.0
-size = Vector3(0.6, 1.8, 0.6)
+size = Vector3(0.6, 2, 0.6)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_juxiq"]
-height = 1.8
 radius = 0.3
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sl4o1"]
@@ -20,22 +19,113 @@ height = 1.8
 material = SubResource("StandardMaterial3D_sxnj7")
 size = Vector3(0.1, 0.2, 0.5)
 
-[node name="Player" type="CharacterBody3D"]
+[sub_resource type="Animation" id="Animation_v2vft"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3DCylinder:shape:height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/Head:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.9, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3DCylinder:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_atwsu"]
+resource_name = "standingToCrouch"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3DCylinder:shape:height")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.0, 1.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/Head:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.9, 0), Vector3(0, 1.4, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3DCylinder:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1, 0), Vector3(0, 0.75, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gx0j8"]
+_data = {
+"RESET": SubResource("Animation_v2vft"),
+"standingToCrouch": SubResource("Animation_atwsu")
+}
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fcivu"]
+height = 0.5
+radius = 0.3
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("ANIMATIONPLAYER", "CROUCH_SHAPECAST")]
 wall_min_slide_angle = 0.0872665
-floor_snap_length = 0.2
+floor_snap_length = 0.04
 script = ExtResource("1")
+ANIMATIONPLAYER = NodePath("AnimationPlayer")
+CROUCH_SHAPECAST = NodePath("ShapeCast3D")
+is_enabled_stair_stepping_in_air = false
 
-[node name="CollisionShape3D1" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("6")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3DBox" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 visible = false
-shape = SubResource("CylinderShape3D_juxiq")
+shape = SubResource("6")
 disabled = true
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3DCylinder" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_juxiq")
+
+[node name="CollisionShape3DCapsule" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 visible = false
 shape = SubResource("CapsuleShape3D_sl4o1")
@@ -44,7 +134,7 @@ disabled = true
 [node name="Body" type="Node3D" parent="."]
 
 [node name="Head" type="Node3D" parent="Body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
 
 [node name="CameraMarker3D" type="Marker3D" parent="Body/Head"]
 
@@ -59,3 +149,13 @@ visible = false
 cast_shadow = 0
 gi_mode = 0
 mesh = SubResource("BoxMesh_dhg0d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gx0j8")
+}
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+shape = SubResource("CylinderShape3D_fcivu")
+target_position = Vector3(0, 0.35, 0)

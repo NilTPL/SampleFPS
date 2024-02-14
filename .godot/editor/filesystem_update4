@@ -1,8 +1,7 @@
 res://levels/level_001.tscn
 res://environment/WE_test.tres
 res://shaders/postprocessingps1.gdshader
-res://materials/orange_grid.tres
-res://controllers/scripts/Player.gd
+res://addons/qodot/game_definitions/fgd/qodot_fgd.tres
+res://textures/tiny/tp2/Elements/Elements_20-128x128.gdshader
 res://levels/WE_test.tscn
 res://controllers/Player.tscn
-res://TestStairs.tscn
