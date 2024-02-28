@@ -5,3 +5,4 @@ res://addons/qodot/game_definitions/fgd/qodot_fgd.tres
 res://textures/tiny/tp2/Elements/Elements_20-128x128.gdshader
 res://levels/WE_test.tscn
 res://controllers/Player.tscn
+res://controllers/scripts/Player.gd

@@ -1,0 +1,18 @@
+// Game: SampleFPS
+// Format: Valve
+// entity 0
+{
+"mapversion" "220"
+"classname" "worldspawn"
+"_tb_mod" "textures"
+"_tb_textures" "textures;textures/tiny/tp1/Grass"
+// brush 0
+{
+( -640 -640 -32 ) ( -640 -630 -32 ) ( -640 -640 -31 ) tiny/tp1/Grass/Grass_06-128x128 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -640 -640 -32 ) ( -640 -640 -31 ) ( -630 -640 -32 ) tiny/tp1/Grass/Grass_06-128x128 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -640 -640 -32 ) ( -630 -640 -32 ) ( -640 -630 -32 ) tiny/tp1/Grass/Grass_06-128x128 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 640 640 0 ) ( 640 650 0 ) ( 650 640 0 ) tiny/tp1/Grass/Grass_06-128x128 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 640 640 0 ) ( 650 640 0 ) ( 640 640 1 ) tiny/tp1/Grass/Grass_06-128x128 [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 640 640 0 ) ( 640 640 1 ) ( 640 650 0 ) tiny/tp1/Grass/Grass_06-128x128 [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}

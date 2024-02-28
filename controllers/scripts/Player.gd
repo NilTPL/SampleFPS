@@ -13,14 +13,14 @@ extends CharacterBody3D
 
 const ACCELERATION_DEFAULT: float = 7.0
 const ACCELERATION_AIR: float = 1.0
-@export var SPEED_DEFAULT: float = 7.0
-@export var SPEED_ON_STAIRS: float = 3.5
-@export var SPEED_CROUCH: float = 3.0
+@export var SPEED_DEFAULT: float = 7
+@export var SPEED_ON_STAIRS: float = 5.5
+@export var SPEED_CROUCH: float = 4.5
 
 var acceleration: float = ACCELERATION_DEFAULT
-var speed: float = SPEED_DEFAULT
+var speed: float
 
-var gravity: float = 9.8
+var gravity: float = 14
 var jump: float = 5.0
 var direction: Vector3 = Vector3.ZERO
 var main_velocity: Vector3 = Vector3.ZERO
@@ -40,6 +40,7 @@ const SPEED_CLAMP_SLOPE_STEP_UP_COEFFICIENT = 0.4
 var step_height_main: Vector3
 var step_incremental_check_height: Vector3
 @export var is_enabled_stair_stepping_in_air: bool = true
+@export var is_enabled_crouch_toggling: bool = false
 var is_jumping: bool = false
 var is_in_air: bool = false
 var is_crouching: bool = false
@@ -70,6 +71,8 @@ func _ready():
 	camera_gt_current = camera_target.global_transform
 
 	CROUCH_SHAPECAST.add_exception($".")
+	
+	speed = SPEED_DEFAULT
 
 func update_camera_transform():
 	camera_gt_previous = camera_gt_current
@@ -110,6 +113,25 @@ func _input(event):
 		head.rotation.x = clamp(head.rotation.x, deg_to_rad(-89), deg_to_rad(89))
 	if event.is_action_pressed("exit"):
 		get_tree().quit()
+	
+	if is_enabled_crouch_toggling and event.is_action_pressed("player_crouch"):
+		if is_crouching:
+			if !CROUCH_SHAPECAST.is_colliding():
+				movementStateChange("uncrouch")
+			elif CROUCH_SHAPECAST.is_colliding():
+				uncrouch_check()
+		elif !is_crouching:
+			movementStateChange("crouch")
+			
+	if !is_enabled_crouch_toggling:
+		if Input.is_action_just_pressed("player_crouch"):
+			if !is_crouching:
+				movementStateChange("crouch")
+		if Input.is_action_just_released("player_crouch"):
+			if !CROUCH_SHAPECAST.is_colliding():
+				movementStateChange("uncrouch")
+			elif CROUCH_SHAPECAST.is_colliding():
+				uncrouch_check()
 
 func _physics_process(delta):
 	update_camera = true
@@ -117,8 +139,11 @@ func _physics_process(delta):
 	
 	var input = Input.get_vector("player_move_left", "player_move_right", "player_move_forward", "player_move_backward")
 	direction = (body.global_transform.basis * Vector3(input.x, 0, input.y)).normalized()
-
+	
+	
+	
 	if is_on_floor():
+	
 		is_jumping = false
 		is_in_air = false
 		acceleration = ACCELERATION_DEFAULT
@@ -157,12 +182,15 @@ func _physics_process(delta):
 		if is_enabled_stair_stepping:
 			global_transform.origin += step_result.diff_position
 			head_offset = step_result.diff_position
-			speed = SPEED_ON_STAIRS
+			if !is_crouching:
+				setMovementSpeed("escalating")
+			elif is_crouching:
+				setMovementSpeed("escalating")
 	else:
 		head_offset = head_offset.lerp(Vector3.ZERO, delta * speed * STAIRS_FEELING_COEFFICIENT)
 		
 		if abs(head_offset.y) <= 0.01:
-			speed = SPEED_DEFAULT
+			setMovementSpeed("default")
 
 	movement = main_velocity + gravity_direction
 
@@ -297,4 +325,45 @@ func step_check(delta: float, is_jumping_: bool, step_result: StepResult):
 
 	return is_step
 
+func movementStateChange(changeType):
+	match changeType:
+		"crouch":
+			$AnimationPlayer.play("standingToCrouch", -1, CROUCH_SPEED)
+			is_crouching = true
+			changeCollisionShapeTo("crouching")
+			
+		"uncrouch":
+			$AnimationPlayer.play("standingToCrouch", -1, -CROUCH_SPEED, true)
+			is_crouching = false
+			changeCollisionShapeTo("standing")
+			
 
+
+#Change collision shapes for standing, crouch, crawl
+func changeCollisionShapeTo(shape):
+	match shape:
+		"crouching":
+			#Disabled == false is enabled!
+			$CrouchingCollisionShape3DCylinder.disabled = false
+			$StandingCollisionShape3DCylinder.disabled = true
+		"standing":
+			#Disabled == false is enabled!
+			$StandingCollisionShape3DCylinder.disabled = false
+			$CrouchingCollisionShape3DCylinder.disabled = true
+
+func setMovementSpeed(state):
+	match state:
+		"default":
+			speed = SPEED_DEFAULT
+		"crouching":
+			speed = SPEED_CROUCH
+		"escalating":
+			speed = SPEED_ON_STAIRS
+
+func uncrouch_check():
+	if !Input.is_action_pressed("player_crouch"):
+		if !CROUCH_SHAPECAST.is_colliding():
+			movementStateChange("uncrouch")
+		elif CROUCH_SHAPECAST.is_colliding():
+			await get_tree().create_timer(0.1).timeout
+			uncrouch_check()

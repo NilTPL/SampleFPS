@@ -1,7 +1,9 @@
+CSGBox3D
+CollisionShape3D
+Node3D
 ShapeCast3D
 AnimationPlayer
 QodotMap
-CSGBox3D
 VBoxContainer
 MarginContainer
 PanelContainer
@@ -10,6 +12,3 @@ Line2D
 CenterContainer
 Control
 SubViewportContainer
-SubViewport
-MeshInstance3D
-CSGCylinder3D
