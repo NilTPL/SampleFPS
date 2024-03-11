@@ -14,8 +14,8 @@
 [resource]
 script = ExtResource("3_8vw40")
 export_file = false
-trenchbroom_games_folder = "C:/Users/2P2/AppData/Roaming/TrenchBroom/games"
-game_name = "SampleFPS"
+trenchbroom_games_folder = "C:/Program Files/Trenchbroom/games"
+game_name = "SampleFPSc"
 icon = ExtResource("2_jej4n")
 map_formats = Array[Dictionary]([{
 "format": "Valve",
