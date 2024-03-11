@@ -16,10 +16,16 @@ run/main_scene="res://levels/level_001.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://controllers/scripts/global.gd"
+
 [display]
 
 window/size/viewport_width=864
 window/size/always_on_top=true
+window/per_pixel_transparency/allowed=true
+window/vsync/vsync_mode=0
 
 [editor_plugins]
 
@@ -85,4 +91,9 @@ textures/lossless_compression/force_png=true
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
 global_illumination/voxel_gi/quality=1
 textures/default_filters/anisotropic_filtering_level=4
+anti_aliasing/screen_space_roughness_limiter/amount=1.0
+scaling_3d/mode=1
 textures/default_filters/texture_mipmap_bias=-1.0
+anti_aliasing/quality/msaa_2d=1
+anti_aliasing/quality/msaa_3d=3
+anti_aliasing/quality/use_taa=true

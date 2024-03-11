@@ -2,6 +2,14 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1bme"]
 bg_color = Color(0.0509804, 0.0509804, 0.0509804, 0.717647)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [resource]
 MarginContainer/constants/margin_bottom = 10
