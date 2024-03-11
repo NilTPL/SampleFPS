@@ -10,12 +10,14 @@ func _ready():
 	for child in get_children():
 		if child is State:
 			states[child.name] = child
+			child.transition.connect(on_child_transition)
 		else:
 			push_warning("state machine contains incompatible child node")
 	CURRENT_STATE.enter()
 
 func _process(delta):
 	CURRENT_STATE.update(delta)
+	Global.Debug.add_property("current State", CURRENT_STATE.name, 1)
 func _physics_process(delta):
 	CURRENT_STATE.physics_update(delta)
 

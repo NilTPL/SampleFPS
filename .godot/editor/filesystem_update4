@@ -9,3 +9,8 @@ res://controllers/Player.tscn
 res://levels/WE_test.tscn
 res://controllers/scripts/State.gd
 res://controllers/scripts/StateMachine.gd
+res://controllers/scripts/IdlePlayerState.gd
+res://controllers/scripts/Player.gd
+res://controllers/scripts/WalkingPlayerState.gd
+res://addons/qodot/game_definitions/fgd/essentials_fgd.tres
+res://addons/qodot/game_definitions/trenchbroom_game_config.tres

@@ -76,6 +76,9 @@ func _update_camera(delta):
 	_rotation_input = 0.0
 	_tilt_input = 0.0
 func _ready():
+	
+	Global.player = self
+	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 	CROUCH_SHAPECAST.add_exception($".")
