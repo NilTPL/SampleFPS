@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://x3l0v6tbskoe"]
+[gd_scene load_steps=12 format=3 uid="uid://x3l0v6tbskoe"]
 
 [ext_resource type="Script" path="res://controllers/scripts/Player.gd" id="1"]
 [ext_resource type="Script" path="res://controllers/scripts/Reticle.gd" id="2_d5rrq"]
 [ext_resource type="Theme" uid="uid://kbtlmcl300x7" path="res://ui/themes/Theme01.tres" id="3_5b32w"]
 [ext_resource type="Script" path="res://controllers/scripts/Debug.gd" id="4_vei8s"]
+[ext_resource type="Script" path="res://controllers/scripts/StateMachine.gd" id="5_omktd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_23ra4"]
 
@@ -146,3 +147,10 @@ layout_mode = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/DebugPanel/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="PlayerStateMachine" type="Node" parent="."]
+script = ExtResource("5_omktd")
+
+[node name="IdlePlayerState" type="Node" parent="PlayerStateMachine"]
+
+[node name="WalkingPlayerState" type="Node" parent="PlayerStateMachine"]
