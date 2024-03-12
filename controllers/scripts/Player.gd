@@ -5,10 +5,13 @@ extends CharacterBody3D
 @export var ANIMATIONPLAYER: AnimationPlayer
 @export var CROUCH_SHAPECAST : Node3D
 @export var mouse_sensitivity: float = 0.1
-@export_range(1, 20, 0.1) var CROUCH_SPEED: float = 15.0
+@export_range(1, 20, 0.1) var CROUCHING_SPEED: float = 15.0
 
-@export var SPEED_DEFAULT: float = 5
+@export var SPEED_DEFAULT: float = 5.5
 @export var SPEED_CROUCH: float = 2.5
+@export var JUMP_VELOCITY: float = 3.5
+@export var ACCELERATION: float = 0.1
+@export var DECELERATION: float = 0.25
 
 @export var TILT_LOWER_LIMIT := deg_to_rad(-90.0)
 @export var TILT_UPPER_LIMIT := deg_to_rad(90.0)
@@ -30,29 +33,31 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 
 func _input(event):
+	#exit button - esc
 	if event.is_action_pressed("exit"):
 			get_tree().quit()
+	# if crouch is on a toggle, handle crouching
 	if is_enabled_crouch_toggling and event.is_action_pressed("player_crouch"):
-		if is_crouching:
+		if is_crouching: # if already crouched, check for collision and act accordingly
 			if !CROUCH_SHAPECAST.is_colliding():
 				movementStateChange("uncrouch")
 			elif CROUCH_SHAPECAST.is_colliding():
-				uncrouch_check()
-		elif !is_crouching:
-			movementStateChange("crouch")
-			
+				uncrouch_check() # check collision for as long as uncrouch attempt is sent
+		elif !is_crouching:# if not already crouched, crouch
+			movementStateChange("crouch") 
+	# if crouch isn't on a toggle, handle crouching
 	if !is_enabled_crouch_toggling:
 		if Input.is_action_just_pressed("player_crouch"):
 			
-			if !is_crouching:
+			if !is_crouching: # if not already crouched, slow down and crouch
 				movementStateChange("crouch")
 				_SPEED = SPEED_CROUCH
-		if Input.is_action_just_released("player_crouch"):
+		if Input.is_action_just_released("player_crouch"): # if uncrouch attempted, check collision
 			if !CROUCH_SHAPECAST.is_colliding():
 				movementStateChange("uncrouch")
-				_SPEED = SPEED_DEFAULT
+				_SPEED = SPEED_DEFAULT # uncrouch and speed back up
 			elif CROUCH_SHAPECAST.is_colliding():
-				uncrouch_check()
+				uncrouch_check() # check collision for crouch attempt
 	
 func _unhandled_input(event):
 	_mouse_input = event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
@@ -92,7 +97,9 @@ func _physics_process(delta):
 	Global.Debug.add_property("MovementSpeed", _SPEED, 1)
 	Global.Debug.add_property("FPS", Global.Debug.frames_per_second, 2)
 	Global.Debug.add_property("is_crouching", is_crouching, 3)
-
+	
+	if Input.is_action_just_pressed("player_jump") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
 	
 	_update_camera(delta)
 	# Get the input direction and handle the movement/deceleration.
@@ -100,23 +107,25 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("player_move_left", "player_move_right", "player_move_forward", "player_move_backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * _SPEED
-		velocity.z = direction.z * _SPEED
+		velocity.x = lerp(velocity.x, direction.x * _SPEED, ACCELERATION)
+		velocity.z = lerp(velocity.z, direction.z * _SPEED, ACCELERATION)
 	else:
-		velocity.x = move_toward(velocity.x, 0, _SPEED)
-		velocity.z = move_toward(velocity.z, 0, _SPEED)
+		var vel = Vector2(velocity.x,velocity.z)
+		var temp = move_toward(Vector2(velocity.x,velocity.z).length(), 0, DECELERATION)
+		velocity.x = vel.normalized().x * temp
+		velocity.z = vel.normalized().y * temp
 
 	move_and_slide()
 
 func movementStateChange(changeType):
 	match changeType:
 		"crouch":
-			$AnimationPlayer.play("standingToCrouch", -1, CROUCH_SPEED)
+			$AnimationPlayer.play("standingToCrouch", -1, CROUCHING_SPEED)
 			is_crouching = true
 			changeCollisionShapeTo("crouching")
 			
 		"uncrouch":
-			$AnimationPlayer.play("standingToCrouch", -1, -CROUCH_SPEED, true)
+			$AnimationPlayer.play("standingToCrouch", -1, -CROUCHING_SPEED, true)
 			is_crouching = false
 			changeCollisionShapeTo("standing")
 			
