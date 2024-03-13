@@ -1,11 +1,11 @@
-res://controllers/Player.tscn
+res://levels/level_001.tscn
 res://shaders/Skyshader.gdshader
 res://environment/WE_test.tres
 res://shaders/postprocessingps1.gdshader
 res://addons/qodot/game_definitions/fgd/qodot_fgd.tres
 res://ui/themes/Theme01.tres
 res://textures/tiny/tp2/Elements/Elements_20-128x128.gdshader
-res://controllers/scripts/Player.gd
-res://levels/level_001.tscn
+res://controllers/Player.tscn
 res://levels/WE_test.tscn
+res://controllers/scripts/WalkingPlayerState.gd
 res://controllers/scripts/IdlePlayerState.gd
