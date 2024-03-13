@@ -9,6 +9,7 @@ extends CharacterBody3D
 
 @export var SPEED_DEFAULT: float = 5.5
 @export var SPEED_CROUCH: float = 2.5
+@export var SPEED_SPRINT: float = 7.0
 @export var JUMP_VELOCITY: float = 3.5
 @export var ACCELERATION: float = 0.1
 @export var DECELERATION: float = 0.25
@@ -97,6 +98,7 @@ func _physics_process(delta):
 	Global.Debug.add_property("MovementSpeed", _SPEED, 1)
 	Global.Debug.add_property("FPS", Global.Debug.frames_per_second, 2)
 	Global.Debug.add_property("is_crouching", is_crouching, 3)
+	Global.Debug.add_property("velocity", velocity.length(), 4)
 	
 	if Input.is_action_just_pressed("player_jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
