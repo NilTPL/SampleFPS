@@ -2,7 +2,6 @@ class_name Player
 
 extends CharacterBody3D
 
-
 @export var MOUSE_SENSITIVITY : float = 0.5
 @export var TILT_LOWER_LIMIT := deg_to_rad(-90.0)
 @export var TILT_UPPER_LIMIT := deg_to_rad(90.0)
@@ -49,7 +48,7 @@ func update_camera(delta) -> void:
 	
 func _ready():
 	
-	Global.Player = self
+	Global.player = self
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
@@ -57,7 +56,7 @@ func _ready():
 
 func _physics_process(delta):
 	
-	Global.Debug.add_property("Velocity","%.2f" % velocity.length(), 2)
+	Global.debug.add_property("Velocity","%.2f" % velocity.length(), 2)
 	
 	update_camera(delta)
 	
@@ -65,7 +64,8 @@ func update_gravity(delta) -> void:
 	velocity.y -= gravity * delta
 	
 func update_input(speed: float, acceleration: float, deceleration: float) -> void:
-	var input_dir = Input.get_vector("player_move_left", "player_move_right", "player_move_forward", "player_move_backward")
+	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
+	
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	if direction:

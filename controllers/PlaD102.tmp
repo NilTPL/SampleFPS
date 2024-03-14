@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://x3l0v6tbskoe"]
 
-[ext_resource type="Script" path="res://controllers/scripts/player.gd" id="1"]
+[ext_resource type="Script" path="res://controllers/scripts/Player.gd" id="1"]
 [ext_resource type="Script" path="res://controllers/scripts/Reticle.gd" id="2_d5rrq"]
 [ext_resource type="Theme" uid="uid://kbtlmcl300x7" path="res://ui/themes/Theme01.tres" id="3_5b32w"]
 [ext_resource type="Script" path="res://controllers/scripts/Debug.gd" id="4_vei8s"]
@@ -165,6 +165,9 @@ _data = {
 wall_min_slide_angle = 0.0872665
 floor_snap_length = 0.04
 script = ExtResource("1")
+MOUSE_SENSITIVITY = null
+TILT_LOWER_LIMIT = null
+TILT_UPPER_LIMIT = null
 CAMERA_CONTROLLER = NodePath("Body/Head/CameraMarker3D/Camera3D")
 ANIMATIONPLAYER = NodePath("AnimationPlayer")
 CROUCH_SHAPECAST = NodePath("ShapeCast3D")
@@ -261,9 +264,6 @@ CURRENT_STATE = NodePath("IdlePlayerState")
 
 [node name="IdlePlayerState" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("6_vf4w8")
-_SPEED = null
-ACCELERATION = null
-DECELERATION = null
 
 [node name="WalkingPlayerState" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("7_pjx4o")
