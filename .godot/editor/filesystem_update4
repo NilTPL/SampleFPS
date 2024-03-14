@@ -8,8 +8,7 @@ res://textures/tiny/tp2/Elements/Elements_20-128x128.gdshader
 res://controllers/scripts/player.gd
 res://levels/level_001.tscn
 res://levels/WE_test.tscn
-res://controllers/CrouchingPlayerState.gd
-res://controllers/scripts/IdlePlayerState.gd
-res://controllers/scripts/PlayerMovementState.gd
 res://controllers/scripts/WalkingPlayerState.gd
+res://controllers/scripts/IdlePlayerState.gd
 res://controllers/scripts/SprintingPlayerState.gd
+res://controllers/CrouchingPlayerState.gd

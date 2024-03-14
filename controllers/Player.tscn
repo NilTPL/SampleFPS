@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://x3l0v6tbskoe"]
 
-[ext_resource type="Script" path="res://controllers/scripts/player.gd" id="1"]
+[ext_resource type="Script" path="res://controllers/scripts/playercontroller.gd" id="1"]
 [ext_resource type="Script" path="res://controllers/scripts/Reticle.gd" id="2_d5rrq"]
 [ext_resource type="Theme" uid="uid://kbtlmcl300x7" path="res://ui/themes/Theme01.tres" id="3_5b32w"]
 [ext_resource type="Script" path="res://controllers/scripts/Debug.gd" id="4_vei8s"]
