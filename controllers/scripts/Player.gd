@@ -4,7 +4,7 @@ extends CharacterBody3D
 
 
 @export var MOUSE_SENSITIVITY : float = 0.5
-@export var TILT_LOWER_LIMIT := deg_to_rad(-90.0)
+@export var TILT_LOWER_LIMIT := deg_to_rad(-90.0)	
 @export var TILT_UPPER_LIMIT := deg_to_rad(90.0)
 @export var CAMERA_CONTROLLER : Camera3D
 @export var ANIMATIONPLAYER : AnimationPlayer
@@ -57,6 +57,7 @@ func _ready():
 
 func _physics_process(delta):
 	
+	Global.Debug.add_property("Frames Per Second", Global.Debug.frames_per_second, 1)
 	Global.Debug.add_property("Velocity","%.2f" % velocity.length(), 2)
 	
 	update_camera(delta)

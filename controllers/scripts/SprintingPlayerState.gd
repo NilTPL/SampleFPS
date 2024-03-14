@@ -6,7 +6,7 @@ class_name SprintingPlayerState extends PlayerMovementState
 @export var TOP_ANIM_SPEED: float = 1.6
 
 func enter() -> void:
-	ANIMATION.play("Sprint", 0.5, 1.0)
+	ANIMATIONPLAYER.play("Sprint", 0.5, 1.0)
 func update(delta):
 	PLAYER.update_gravity(delta)
 	PLAYER.update_input(_SPEED, ACCELERATION, DECELERATION)
@@ -19,4 +19,4 @@ func update(delta):
 
 func set_anim_speed(spd) -> void:
 	var alpha = remap(spd, 0.0, _SPEED, 0.0, 1.0)
-	ANIMATION.speed_scale = lerp(0.0, TOP_ANIM_SPEED, alpha)
+	ANIMATIONPLAYER.speed_scale = lerp(0.0, TOP_ANIM_SPEED, alpha)

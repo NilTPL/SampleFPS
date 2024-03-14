@@ -8,7 +8,7 @@ extends PlayerMovementState
 @export var TOP_ANIM_SPEED : float = 2.2
 
 func enter() -> void:
-	ANIMATION.play("Walking", -1.0, 1.0)
+	ANIMATIONPLAYER.play("Walking", -1.0, 1.0)
 	
 
 func update(delta):
@@ -22,7 +22,7 @@ func update(delta):
 
 func set_anim_speed(spd):
 	var alpha = remap(spd, 0.0, _SPEED, 0.0, 1.0)
-	ANIMATION.speed_scale = lerp(0.0, TOP_ANIM_SPEED, alpha)
+	ANIMATIONPLAYER.speed_scale = lerp(0.0, TOP_ANIM_SPEED, alpha)
 
 func _input(event) -> void:
 	if event.is_action_pressed("player_sprint") and PLAYER.is_on_floor():

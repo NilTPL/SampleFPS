@@ -344,3 +344,7 @@ script = ExtResource("8_qj6du")
 
 [node name="CrouchingPlayerState" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("9_q0d54")
+_SPEED = null
+ACCELERATION = null
+DECELERATION = null
+CROUCH_SPEED = null
