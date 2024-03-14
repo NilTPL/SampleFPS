@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://cqkf3y4kc0n0g"
+path="res://.godot/imported/mansion.map-9ac5305c548a158a410353a9e264d003.tres"
+
+[deps]
+
+source_file="res://maps/mansion.map"
+dest_files=["res://.godot/imported/mansion.map-9ac5305c548a158a410353a9e264d003.tres"]
+
+[params]
+

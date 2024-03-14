@@ -238,6 +238,7 @@ _data = {
 wall_min_slide_angle = 0.0872665
 floor_snap_length = 0.04
 script = ExtResource("1")
+MOUSE_SENSITIVITY = 0.1
 CAMERA_CONTROLLER = NodePath("Body/Head/CameraMarker3D/Camera3D")
 ANIMATIONPLAYER = NodePath("AnimationPlayer")
 CROUCH_SHAPECAST = NodePath("ShapeCast3D")
