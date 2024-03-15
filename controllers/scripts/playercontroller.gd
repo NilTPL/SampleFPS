@@ -49,7 +49,7 @@ func update_camera(delta) -> void:
 	
 func _ready():
 	
-	Global.Player = self
+	Global.player = self
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	

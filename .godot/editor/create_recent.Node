@@ -1,3 +1,4 @@
+ReflectionProbe
 OmniLight3D
 State
 Node
@@ -7,9 +8,7 @@ PanelContainer
 Line2D
 CenterContainer
 Control
-ReflectionProbe
 CSGBox3D
 CollisionShape3D
 Node3D
 ShapeCast3D
-AnimationPlayer

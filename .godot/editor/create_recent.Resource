@@ -1,2 +1,3 @@
+QodotFGDFile
 ShaderMaterial
 StandardMaterial3D

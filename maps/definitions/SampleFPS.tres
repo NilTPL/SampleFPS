@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QodotFGDFile" load_steps=3 format=3 uid="uid://b4u4t1dvphva6"]
+
+[ext_resource type="Script" path="res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_file.gd" id="1_73kss"]
+[ext_resource type="Resource" uid="uid://c36hv0o6g0udo" path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" id="1_x1te5"]
+
+[resource]
+script = ExtResource("1_73kss")
+export_file = false
+target_folder = ""
+fgd_name = "SampleFPS"
+base_fgd_files = Array[Resource]([ExtResource("1_x1te5")])
+entity_definitions = Array[Resource]([])

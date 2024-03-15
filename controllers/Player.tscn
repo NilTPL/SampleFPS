@@ -147,7 +147,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
-"points": PackedFloat32Array(0.005, -0.1, 0, 0.1, 0, -3.62813e-05, -0.1, 0, 0.1, 0, -0.005, -0.1, 0, 0.1, 0, 6.33884e-05, -0.1, 0, 0.1, 0, 0.00489255, -0.1, 0, 0.1, 0),
+"points": PackedFloat32Array(0.001, -0.1, 0, 0.1, 0, -3.62813e-05, -0.1, 0, 0.1, 0, -0.001, -0.1, 0, 0.1, 0, 6.33884e-05, -0.1, 0, 0.1, 0, 0.001, -0.1, 0, 0.1, 0),
 "times": PackedFloat32Array(0, 0.5, 1, 1.5, 2)
 }
 tracks/1/type = "bezier"
@@ -247,6 +247,12 @@ CROUCH_SHAPECAST = NodePath("ShapeCast3D")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_23ra4")
 
+[node name="ReflectionProbe" type="ReflectionProbe" parent="CollisionShape"]
+update_mode = 1
+max_distance = 10.0
+box_projection = true
+enable_shadows = true
+
 [node name="Body" type="Node3D" parent="."]
 
 [node name="Head" type="Node3D" parent="Body"]
@@ -294,24 +300,24 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_d5rrq")
-RETICLE_LINES = [NodePath("Top"), NodePath("Right"), NodePath("Bottom"), NodePath("Left")]
+RETICLE_LINES = [NodePath("TopR"), null, null, null]
 PLAYER_CONTROLLER = NodePath("../..")
 
-[node name="Top" type="Line2D" parent="UserInterface/Reticle"]
-points = PackedVector2Array(0, -5, 0, -15)
-width = 2.0
+[node name="TopR" type="Line2D" parent="UserInterface/Reticle"]
+points = PackedVector2Array(15, -5, 15, -15, 5, -15)
+width = 1.0
 
-[node name="Right" type="Line2D" parent="UserInterface/Reticle"]
-points = PackedVector2Array(5, 0, 15, 0)
-width = 2.0
+[node name="TopL" type="Line2D" parent="UserInterface/Reticle"]
+points = PackedVector2Array(-15, -5, -15, -15, -5, -15)
+width = 1.0
 
-[node name="Bottom" type="Line2D" parent="UserInterface/Reticle"]
-points = PackedVector2Array(0, 5, 0, 15)
-width = 2.0
+[node name="BotL" type="Line2D" parent="UserInterface/Reticle"]
+points = PackedVector2Array(-15, 5, -15, 15, -5, 15)
+width = 1.0
 
-[node name="Left" type="Line2D" parent="UserInterface/Reticle"]
-points = PackedVector2Array(-15, 0, -5, 0)
-width = 2.0
+[node name="BotR" type="Line2D" parent="UserInterface/Reticle"]
+points = PackedVector2Array(15, 5, 15, 15, 5, 15)
+width = 1.0
 
 [node name="DebugPanel" type="PanelContainer" parent="UserInterface"]
 custom_minimum_size = Vector2(200, 0)

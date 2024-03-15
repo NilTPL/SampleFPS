@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("1_al2sl")
 export_file = false
-target_folder = "C:/Users/2P2/appdata/Roaming/TrenchBroom"
+target_folder = "C:/Users/2P/Documents/SampleFPS"
 fgd_name = "QodotEssentials"
 base_fgd_files = Array[Resource]([])
 entity_definitions = Array[Resource]([ExtResource("1_578qp"), ExtResource("2_7jkgk")])
