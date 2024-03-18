@@ -1,3 +1,4 @@
+StandardMaterial3D
+CompressedTexture2D
 QodotFGDFile
 ShaderMaterial
-StandardMaterial3D

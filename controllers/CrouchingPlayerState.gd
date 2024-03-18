@@ -1,6 +1,6 @@
 class_name CrouchingPlayerState extends PlayerMovementState
 
-@export var _SPEED: float = 7.0
+@export var _SPEED: float = 4.5
 @export var ACCELERATION: float = 0.25
 @export var DECELERATION: float = 0.25
 @export_range(1, 15, 0.1) var CROUCH_SPEED : float = 4.0

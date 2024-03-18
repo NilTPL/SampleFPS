@@ -45,7 +45,7 @@ func update_camera(delta) -> void:
 	CAMERA_CONTROLLER.rotation.z = 0.0
 
 	_rotation_input = 0.0
-	_tilt_input = 0.0
+	_tilt_input = 0.0#
 	
 func _ready():
 	
