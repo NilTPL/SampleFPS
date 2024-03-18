@@ -1,8 +1,8 @@
 res://levels/level_001.tscn
+res://addons/qodot/game_definitions/fgd/qodot_fgd.tres
 res://shaders/Skyshader.gdshader
 res://environment/WE_test.tres
 res://shaders/postprocessingps1.gdshader
-res://addons/qodot/game_definitions/fgd/qodot_fgd.tres
 res://ui/themes/Theme01.tres
 res://textures/Industrial/Fence.tres
 res://textures/Mansion/window_clean_texture.tres
@@ -10,3 +10,6 @@ res://textures/Mansion/candle_holder_texture.tres
 res://textures/tiny/tp2/Elements/Elements_20-128x128.gdshader
 res://controllers/Player.tscn
 res://levels/WE_test.tscn
+res://textures/Mansion/pillar0_texture.tres
+res://controllers/scripts/SprintingPlayerState.gd
+res://controllers/scripts/playercontroller.gd

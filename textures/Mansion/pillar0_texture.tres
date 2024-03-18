@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bceutudcmdixi"]
+
+[ext_resource type="Texture2D" uid="uid://o6akpkbd00b4" path="res://textures/Mansion/pillar0_texture.png" id="1_e1lah"]
+
+[resource]
+albedo_texture = ExtResource("1_e1lah")
+ao_enabled = true
+texture_filter = 0
