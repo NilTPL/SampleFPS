@@ -1,3 +1,7 @@
+MeshInstance3D
+CharacterBody3D
+CSGBox3D
+CollisionShape3D
 Node3D
 OmniLight3D
 ReflectionProbe
@@ -9,6 +13,3 @@ PanelContainer
 Line2D
 CenterContainer
 Control
-CSGBox3D
-CollisionShape3D
-ShapeCast3D

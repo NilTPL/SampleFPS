@@ -1,0 +1,42 @@
+// Game: SampleFPS
+// Format: Valve
+// entity 0
+{
+"mapversion" "220"
+"classname" "worldspawn"
+"_tb_textures" "textures/Mansion"
+}
+// entity 1
+{
+"classname" "func_group"
+"_tb_type" "_tb_layer"
+"_tb_name" "Floor"
+"_tb_id" "1"
+"_tb_layer_sort_index" "0"
+// brush 0
+{
+( -320 -320 -32 ) ( -320 -315 -32 ) ( -320 -320 -31 ) Mansion/floor0_texture [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.5 0.5
+( -320 -320 -32 ) ( -320 -320 -31 ) ( -315 -320 -32 ) Mansion/floor0_texture [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.5 0.5
+( -320 -320 -32 ) ( -315 -320 -32 ) ( -320 -315 -32 ) Mansion/floor0_texture [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.5 0.5
+( 320 320 0 ) ( 320 325 0 ) ( 325 320 0 ) Mansion/floor0_texture [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.5 0.5
+( 320 320 0 ) ( 325 320 0 ) ( 320 320 1 ) Mansion/floor0_texture [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.5 0.5
+( 320 320 0 ) ( 320 320 1 ) ( 320 325 0 ) Mansion/floor0_texture [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.5 0.5
+}
+}
+// entity 2
+{
+"classname" "func_group"
+"_tb_type" "_tb_layer"
+"_tb_name" "Walls"
+"_tb_id" "2"
+"_tb_layer_sort_index" "1"
+// brush 0
+{
+( -192 -256 0 ) ( -192 -255 0 ) ( -192 -256 1 ) Mansion/wall0_texture [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 0.5 0.5
+( -192 -256 0 ) ( -192 -256 1 ) ( -191 -256 0 ) Mansion/wall0_texture [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 0.5 0.5
+( -192 -256 0 ) ( -191 -256 0 ) ( -192 -255 0 ) Mansion/wall0_texture [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.5 0.5
+( -160 32 136 ) ( -160 33 136 ) ( -159 32 136 ) Mansion/wall0_texture [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.5 0.5
+( -160 32 32 ) ( -159 32 32 ) ( -160 32 33 ) Mansion/wall0_texture [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 0.5 0.5
+( -160 32 32 ) ( -160 32 33 ) ( -160 33 32 ) Mansion/wall0_texture [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 0.5 0.5
+}
+}
