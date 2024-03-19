@@ -10,6 +10,9 @@ extends CharacterBody3D
 @export var ANIMATIONPLAYER : AnimationPlayer
 @export var CROUCH_SHAPECAST : Node3D
 
+@onready var Camera: Camera3D = %Camera3D
+@onready var player_fov: float = 75
+
 var _mouse_input : bool = false
 var _rotation_input : float
 var _tilt_input : float
@@ -61,6 +64,9 @@ func _physics_process(delta):
 	
 	Global.Debug.add_property("Frames Per Second", Global.Debug.frames_per_second, 1)
 	Global.Debug.add_property("Velocity","%.2f" % velocity.length(), 2)
+	Global.Debug.add_property("FOV", "%.2f" % player_fov, 3)
+	
+	player_fov = get_viewport().get_camera_3d().fov
 	
 	update_camera(delta)
 	
@@ -77,6 +83,5 @@ func update_input(speed: float, acceleration: float, deceleration: float) -> voi
 	else:
 		velocity.x = move_toward(velocity.x, 0, deceleration)
 		velocity.z = move_toward(velocity.z, 0, deceleration)
-	
 func update_velocity() -> void:
 	move_and_slide()

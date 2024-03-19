@@ -1,9 +1,9 @@
+OmniLight3D
 MeshInstance3D
 CharacterBody3D
 CSGBox3D
 CollisionShape3D
 Node3D
-OmniLight3D
 ReflectionProbe
 State
 Node
@@ -12,4 +12,3 @@ MarginContainer
 PanelContainer
 Line2D
 CenterContainer
-Control

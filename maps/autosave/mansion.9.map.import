@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://cn5bvdmmkrij5"
+path="res://.godot/imported/mansion.9.map-a3ba6bef9f79c4ba9d88eef564916fcc.tres"
+
+[deps]
+
+source_file="res://maps/autosave/mansion.9.map"
+dest_files=["res://.godot/imported/mansion.9.map-a3ba6bef9f79c4ba9d88eef564916fcc.tres"]
+
+[params]
+
