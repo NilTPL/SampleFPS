@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuakeMapFile" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/qodot/src/resources/quake_map_file.gd" id="1_ovrcx"]
+[ext_resource type="Script" path="res://addons/func_godot/src/import/quake_map_file.gd" id="1_m1cbr"]
 
 [resource]
-script = ExtResource("1_ovrcx")
-revision = 1
+script = ExtResource("1_m1cbr")
+revision = 0

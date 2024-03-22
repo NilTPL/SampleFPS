@@ -1,9 +1,10 @@
+Node3D
+CollisionShape3D
+FuncGodotMap
 OmniLight3D
 MeshInstance3D
 CharacterBody3D
 CSGBox3D
-CollisionShape3D
-Node3D
 ReflectionProbe
 State
 Node
@@ -11,4 +12,3 @@ VBoxContainer
 MarginContainer
 PanelContainer
 Line2D
-CenterContainer

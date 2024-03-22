@@ -5,7 +5,7 @@
 "mapversion" "220"
 "classname" "worldspawn"
 "_tb_textures" "textures/Mansion"
-"_tb_def" "builtin:QodotQuakeCompat.fgd"
+"_tb_def" "external:SampleFPSEntities.fgd"
 }
 // entity 1
 {

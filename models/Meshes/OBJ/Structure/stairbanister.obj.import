@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://beojvgf6r38ew"
+path="res://.godot/imported/stairbanister.obj-20d201ba017d54bd1137a8d813d6771a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stairbanister.obj-20d201ba017d54bd1137a8d813d6771a.mesh"]
+
+source_file="res://models/Meshes/OBJ/Structure/stairbanister.obj"
+dest_files=["res://.godot/imported/stairbanister.obj-20d201ba017d54bd1137a8d813d6771a.mesh", "res://.godot/imported/stairbanister.obj-20d201ba017d54bd1137a8d813d6771a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

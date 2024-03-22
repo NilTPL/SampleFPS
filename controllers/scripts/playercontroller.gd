@@ -9,8 +9,6 @@ extends CharacterBody3D
 @export var CAMERA_CONTROLLER : Camera3D
 @export var ANIMATIONPLAYER : AnimationPlayer
 @export var CROUCH_SHAPECAST : Node3D
-
-@onready var Camera: Camera3D = %Camera3D
 @onready var player_fov: float = 75
 
 var _mouse_input : bool = false

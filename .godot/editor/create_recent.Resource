@@ -1,3 +1,4 @@
+FuncGodotFGDFile
 StandardMaterial3D
 CompressedTexture2D
 QodotFGDFile

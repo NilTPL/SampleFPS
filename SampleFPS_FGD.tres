@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=8 format=3 uid="uid://ut3gwy84hegw"]
+
+[ext_resource type="Resource" uid="uid://crgpdahjaj" path="res://addons/func_godot/fgd/func_godot_fgd.tres" id="1_b8bdb"]
+[ext_resource type="Resource" uid="uid://cxy7jnh6d7msn" path="res://addons/func_godot/fgd/func_detail.tres" id="2_6ff1e"]
+[ext_resource type="Resource" uid="uid://ch3e0dix85uhb" path="res://addons/func_godot/fgd/func_detail_illusionary.tres" id="3_fc3yb"]
+[ext_resource type="Resource" uid="uid://dg5x44cc7flew" path="res://addons/func_godot/fgd/func_illusionary.tres" id="4_tdjge"]
+[ext_resource type="Resource" uid="uid://nayxb8n7see2" path="res://addons/func_godot/fgd/phong_base.tres" id="5_kbmu0"]
+[ext_resource type="Resource" uid="uid://bdji3873bg32h" path="res://addons/func_godot/fgd/worldspawn.tres" id="6_4i0uy"]
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="7_y5bde"]
+
+[resource]
+script = ExtResource("7_y5bde")
+export_file = false
+model_key_word_supported = true
+fgd_name = "SampleFPS"
+base_fgd_files = Array[Resource]([ExtResource("1_b8bdb")])
+entity_definitions = Array[Resource]([ExtResource("2_6ff1e"), ExtResource("3_fc3yb"), ExtResource("4_tdjge"), ExtResource("5_kbmu0"), ExtResource("6_4i0uy")])

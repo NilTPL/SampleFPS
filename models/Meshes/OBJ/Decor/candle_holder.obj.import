@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://8kumlunl2i64"
+path="res://.godot/imported/candle_holder.obj-9dbd0f4648102bad854c77cb06e66f2d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/candle_holder.obj-9dbd0f4648102bad854c77cb06e66f2d.mesh"]
+
+source_file="res://models/Meshes/OBJ/Decor/candle_holder.obj"
+dest_files=["res://.godot/imported/candle_holder.obj-9dbd0f4648102bad854c77cb06e66f2d.mesh", "res://.godot/imported/candle_holder.obj-9dbd0f4648102bad854c77cb06e66f2d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

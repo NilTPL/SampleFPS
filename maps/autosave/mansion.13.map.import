@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://bttf30o0y6jnl"
+path="res://.godot/imported/mansion.13.map-c854abd0a4742b5a9778d9d99afbca2b.tres"
+
+[deps]
+
+source_file="res://maps/autosave/mansion.13.map"
+dest_files=["res://.godot/imported/mansion.13.map-c854abd0a4742b5a9778d9d99afbca2b.tres"]
+
+[params]
+

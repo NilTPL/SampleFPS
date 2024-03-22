@@ -279,7 +279,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_d5rrq")
-RETICLE_LINES = [NodePath("TopR"), null, null, null]
+RETICLE_LINES = [NodePath("TopL"), NodePath("TopR"), NodePath("BotL"), NodePath("BotR")]
 PLAYER_CONTROLLER = NodePath("../..")
 
 [node name="TopR" type="Line2D" parent="UserInterface/Reticle"]

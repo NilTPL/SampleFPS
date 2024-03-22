@@ -1,12 +1,9 @@
 res://levels/level_001.tscn
-res://addons/qodot/game_definitions/fgd/qodot_fgd.tres
+res://addons/func_godot/fgd/func_godot_fgd.tres
+res://ui/themes/Theme01.tres
 res://shaders/Skyshader.gdshader
 res://environment/WE_test.tres
 res://shaders/postprocessingps1.gdshader
-res://ui/themes/Theme01.tres
 res://textures/tiny/tp2/Elements/Elements_20-128x128.gdshader
 res://controllers/Player.tscn
 res://levels/WE_test.tscn
-res://controllers/scripts/SprintingPlayerState.gd
-res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_class.gd
-res://controllers/scripts/playercontroller.gd
