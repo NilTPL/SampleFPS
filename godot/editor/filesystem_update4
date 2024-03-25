@@ -1,5 +1,4 @@
 res://levels/level_001.tscn
 res://addons/func_godot/fgd/func_godot_fgd.tres
 res://ui/themes/Theme01.tres
-res://addons/func_godot/textures/default_material.tres
-res://addons/func_godot/func_godot_default_map_settings.tres
+res://shaders/postprocessingps1.gdshader
