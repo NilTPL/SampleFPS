@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d3cwpe01rm404"]
+
+[ext_resource type="Texture2D" uid="uid://dslog2ctx682q" path="res://textures/SAMPLE/SLUDGE_1A.png" id="1_ka20h"]
+
+[resource]
+albedo_texture = ExtResource("1_ka20h")
+metallic_specular = 0.0
+texture_filter = 2

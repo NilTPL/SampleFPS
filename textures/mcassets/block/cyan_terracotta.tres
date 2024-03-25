@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c8lay580tx12h"]
+
+[ext_resource type="Texture2D" uid="uid://dbfoxoq6q84jv" path="res://textures/mcassets/block/cyan_terracotta.png" id="1_w3slq"]
+
+[resource]
+albedo_texture = ExtResource("1_w3slq")
+metallic_specular = 0.0
+texture_filter = 2

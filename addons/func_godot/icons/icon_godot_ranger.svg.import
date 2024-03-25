@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfxlhjsefleff"
-path="res://.godot/imported/icon_godot_ranger.svg-8572582518f54de6403b767a923b5a92.ctex"
+path="res://godot/imported/icon_godot_ranger.svg-8572582518f54de6403b767a923b5a92.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://addons/func_godot/icons/icon_godot_ranger.svg"
-dest_files=["res://.godot/imported/icon_godot_ranger.svg-8572582518f54de6403b767a923b5a92.ctex"]
+dest_files=["res://godot/imported/icon_godot_ranger.svg-8572582518f54de6403b767a923b5a92.ctex"]
 
 [params]
 

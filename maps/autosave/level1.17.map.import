@@ -3,12 +3,12 @@
 importer="func_godot.map"
 type="Resource"
 uid="uid://dem7smh51pk3b"
-path="res://.godot/imported/level1.17.map-daca6ce572e533838f14491489e14078.tres"
+path="res://godot/imported/level1.17.map-daca6ce572e533838f14491489e14078.tres"
 
 [deps]
 
 source_file="res://maps/autosave/level1.17.map"
-dest_files=["res://.godot/imported/level1.17.map-daca6ce572e533838f14491489e14078.tres"]
+dest_files=["res://godot/imported/level1.17.map-daca6ce572e533838f14491489e14078.tres"]
 
 [params]
 

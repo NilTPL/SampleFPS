@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://bbqjdol013du6"
+path="res://godot/imported/quakeesque.2.map-94c9cbd2adc230cea7fd4efef917e60d.tres"
+
+[deps]
+
+source_file="res://maps/autosave/quakeesque.2.map"
+dest_files=["res://godot/imported/quakeesque.2.map-94c9cbd2adc230cea7fd4efef917e60d.tres"]
+
+[params]
+

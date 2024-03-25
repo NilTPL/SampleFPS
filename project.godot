@@ -13,6 +13,8 @@ config_version=5
 config/name="Sample"
 config/version="P1"
 run/main_scene="res://levels/level_001.tscn"
+config/use_hidden_project_data_directory=false
+config/use_custom_user_dir=true
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -89,6 +91,7 @@ textures/canvas_textures/default_texture_filter=0
 textures/canvas_textures/default_texture_repeat=1
 textures/lossless_compression/force_png=true
 global_illumination/voxel_gi/quality=1
+textures/default_filters/use_nearest_mipmap_filter=true
 textures/default_filters/anisotropic_filtering_level=4
 environment/ssao/quality=3
 environment/ssil/quality=3

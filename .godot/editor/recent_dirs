@@ -1,3 +1,4 @@
+res://levels/textures
 C:/Godot
 C:/Users/2P/Documents/SampleFPS
 C:/Users/2P/Documents
@@ -7,13 +8,8 @@ res://
 res://maps
 res://levels
 res://controllers
-res://textures/Mansion
-res://textures/Industrial
 res://maps/definitions
 res://controllers/scripts
 res://textures
 res://ui/themes
 res://shaders
-res://textures/tiny/tp2/Elements
-res://textures/prototypeTextures/Dark
-res://materials

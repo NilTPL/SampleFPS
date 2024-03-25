@@ -4,6 +4,5 @@ res://ui/themes/Theme01.tres
 res://shaders/Skyshader.gdshader
 res://environment/WE_test.tres
 res://shaders/postprocessingps1.gdshader
-res://textures/tiny/tp2/Elements/Elements_20-128x128.gdshader
 res://controllers/Player.tscn
 res://levels/WE_test.tscn

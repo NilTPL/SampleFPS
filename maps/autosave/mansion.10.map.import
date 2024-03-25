@@ -3,12 +3,12 @@
 importer="func_godot.map"
 type="Resource"
 uid="uid://5k68ak3dswmm"
-path="res://.godot/imported/mansion.10.map-0833a6785dc9fb0a5d28ca7b8d8b8e1c.tres"
+path="res://godot/imported/mansion.10.map-0833a6785dc9fb0a5d28ca7b8d8b8e1c.tres"
 
 [deps]
 
 source_file="res://maps/autosave/mansion.10.map"
-dest_files=["res://.godot/imported/mansion.10.map-0833a6785dc9fb0a5d28ca7b8d8b8e1c.tres"]
+dest_files=["res://godot/imported/mansion.10.map-0833a6785dc9fb0a5d28ca7b8d8b8e1c.tres"]
 
 [params]
 

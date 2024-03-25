@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bof4ub78pnpg0"]
+
+[ext_resource type="Texture2D" uid="uid://dbvdwt8o5g8q8" path="res://textures/mcassets/block/anvil_top.png" id="1_g8tcf"]
+
+[resource]
+albedo_texture = ExtResource("1_g8tcf")
+metallic_specular = 0.0
+texture_filter = 2

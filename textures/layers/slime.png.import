@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d15fl8uvpaf64"
-path="res://.godot/imported/slime.png-0b0fa37c8aa74ad002fb80d8be4c9f82.ctex"
+path="res://godot/imported/slime.png-0b0fa37c8aa74ad002fb80d8be4c9f82.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://textures/layers/slime.png"
-dest_files=["res://.godot/imported/slime.png-0b0fa37c8aa74ad002fb80d8be4c9f82.ctex"]
+dest_files=["res://godot/imported/slime.png-0b0fa37c8aa74ad002fb80d8be4c9f82.ctex"]
 
 [params]
 

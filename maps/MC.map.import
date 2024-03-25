@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://dl4paltjcnd14"
+path="res://godot/imported/MC.map-ab6252527a3d5e87a25c1ab84101bff8.tres"
+
+[deps]
+
+source_file="res://maps/MC.map"
+dest_files=["res://godot/imported/MC.map-ab6252527a3d5e87a25c1ab84101bff8.tres"]
+
+[params]
+
