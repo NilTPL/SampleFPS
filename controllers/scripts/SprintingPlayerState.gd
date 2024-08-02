@@ -35,6 +35,9 @@ func update(delta):
 	if PLAYER.velocity.length() == 0.0:
 		transition.emit("IdlePlayerState")
 	
+	if PLAYER.velocity.y < -3.0 and !PLAYER.is_on_floor():
+		transition.emit("FallingPlayerState")
+	
 func set_anim_speed(spd) -> void:
 	var alpha = remap(spd, 0.0, _SPEED, 0.0, 1.0)
 	ANIMATIONPLAYER.speed_scale = lerp(0.0, TOP_ANIM_SPEED, alpha)

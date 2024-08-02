@@ -32,7 +32,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _input(event):
 	if event.is_action_pressed("exit"):
 		get_tree().quit()
-
+	
 func update_camera(delta) -> void:
 	_current_rotation = _rotation_input
 	_mouse_rotation.x += _tilt_input * delta
@@ -62,7 +62,10 @@ func _physics_process(delta):
 	
 	Global.Debug.add_property("Frames Per Second", Global.Debug.frames_per_second, 1)
 	Global.Debug.add_property("Velocity","%.2f" % velocity.length(), 2)
+	Global.Debug.add_property("Y Velocity", "%.2f" % velocity.y, 4)
 	Global.Debug.add_property("FOV", "%.2f" % player_fov, 3)
+	Global.Debug.add_property("animation", ANIMATIONPLAYER.current_animation, 5)
+	Global.Debug.add_property("speed scale", "%.2f" % ANIMATIONPLAYER.speed_scale, 6)
 	
 	player_fov = get_viewport().get_camera_3d().fov
 	

@@ -11,8 +11,8 @@ func _ready():
 	queue_redraw()
 
 func _process(delta):
-#	adjust_reticle_lines()
-	pass
+	adjust_reticle_lines()
+
 func _draw():
 	pass
 

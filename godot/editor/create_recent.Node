@@ -1,9 +1,11 @@
+Node
+GridMap
+SpotLight3D
 SubViewport
 SubViewportContainer
 Node3D
 VoxelGI
 FuncGodotMap
 OmniLight3D
-SpotLight3D
 DirectionalLight3D
 WorldEnvironment

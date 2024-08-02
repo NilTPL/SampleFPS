@@ -8,18 +8,17 @@ extends PlayerMovementState
 @export var TOP_ANIM_SPEED: float = 2.2
 
 func enter() -> void:
-	
-	if get_viewport().get_camera_3d().fov > 75:
-		pass
-	ANIMATIONPLAYER.pause()
+	if ANIMATIONPLAYER.is_playing() and ANIMATIONPLAYER.current_animation == "Landing":
+		ANIMATIONPLAYER.speed_scale = 1.0
+		await  ANIMATIONPLAYER.animation_finished
+		ANIMATIONPLAYER.pause()
+	else:
+		ANIMATIONPLAYER.pause()
 
 func update(delta):
 	PLAYER.update_gravity(delta)
 	PLAYER.update_input(_SPEED, ACCELERATION, DECELERATION)
 	PLAYER.update_velocity()
-		
-	set_animation_speed(PLAYER.velocity.length())
-	
 	
 	if Input.is_action_pressed("player_sprint") and PLAYER.is_on_floor() and PLAYER.velocity.length() > 0.0:
 		transition.emit("SprintingPlayerState")
@@ -29,7 +28,6 @@ func update(delta):
 	
 	if PLAYER.velocity.length() > 0.0 and PLAYER.is_on_floor() and !Input.is_action_pressed("player_sprint"):
 		transition.emit("WalkingPlayerState")
-
-func set_animation_speed(spd):
-	var alpha = remap(spd, 0.0, _SPEED, 0.0, 1.0)
-	ANIMATIONPLAYER.speed_scale = lerp(0.0, TOP_ANIM_SPEED, alpha)
+	
+	if PLAYER.velocity.y < -3.0 and !PLAYER.is_on_floor():
+		transition.emit("FallingPlayerState")

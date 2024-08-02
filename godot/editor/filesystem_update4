@@ -1,4 +1,13 @@
-res://levels/level_001.tscn
+res://controllers/Player.tscn
 res://addons/func_godot/fgd/func_godot_fgd.tres
-res://ui/themes/Theme01.tres
+res://maps/Meshlib.tres
 res://shaders/postprocessingps1.gdshader
+res://ui/themes/Theme01.tres
+res://controllers/FallingPlayerState.gd
+res://levels/level_001.tscn
+res://maps/map_1.tscn
+res://maps/tileset.tscn
+res://controllers/scripts/IdlePlayerState.gd
+res://controllers/scripts/playercontroller.gd
+res://controllers/scripts/WalkingPlayerState.gd
+res://controllers/scripts/SprintingPlayerState.gd
